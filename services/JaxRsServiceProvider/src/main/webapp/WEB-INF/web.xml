@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : web.xml
+    Created on : May 19, 2009, 1:31 PM
+    Author     :
+    Copyright 2009 University of California at Berkeley
+    Description:
+        service layer web application
+-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">    
+    <display-name>CollectionSpace Services</display-name>
+    	
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>CollectionSpace realm</realm-name>
+    </login-config>
+
+	<env-entry>
+        <description>Sets the logging context for the Tiger web-app</description>
+        <env-entry-name>cspace-logging-context</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>CSpaceLoggingContext</env-entry-value>
+    </env-entry>
+
+    <context-param>
+        <param-name>javax.ws.rs.Application</param-name>
+        <param-value>org.collectionspace.services.jaxrs.CollectionSpaceJaxRsApplication</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>resteasy.servlet.mapping.prefix</param-name>
+        <param-value>/</param-value>
+    </context-param>
+
+    <!--
+      - Location of the XML file that defines the root application context
+      - Applied by ContextLoaderListener.
+      -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            /WEB-INF/applicationContext-security.xml
+        </param-value>
+    </context-param>
+
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+		<filter-name>CSpaceFilter</filter-name>
+        <filter-class>org.collectionspace.services.common.profile.CSpaceFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CSpaceFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+    
+
+    <!--
+    	***
+    	*** Servlet Context Listeners
+    	***
+    -->
+
+    <!--
+      - Loads the root application context of this web app at startup.
+      - The application context is then available via
+      - WebApplicationContextUtils.getWebApplicationContext(servletContext).
+    -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--
+      - Publishes events for session creation and destruction through the application
+      - context. Optional unless concurrent session control is being used.
+      -->
+    <listener>
+        <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+    </listener>
+
+    <!--listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener-->
+
+	<!-- A general listener for the CollectionSpace services.  In particular, this listener starts the embedded Nuxeo EP server instance. -->
+    <listener>
+        <listener-class>
+            org.collectionspace.services.common.CollectionSpaceServiceContextListener
+        </listener-class>
+    </listener>
+    
+	<!-- The CollectionSpace listener that starts up the RESTEasy/JAX-RS service framework. -->
+    <listener>
+        <listener-class>
+            org.collectionspace.services.jaxrs.CSpaceResteasyBootstrap
+        </listener-class>
+    </listener>
+
+    <servlet>
+            <servlet-name>Resteasy</servlet-name>
+            <servlet-class>
+                org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+            </servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Resteasy</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlReplayMaster>
+    <protoHostPort>http://localhost:8180</protoHostPort>
+    
+    <!-- legal values for dumpServiceResult=[minimal,detailed,full,auto] -->
+    <dump payloads="false" dumpServiceResult="auto" />
+    
+    <auths default="admin@core.collectionspace.org">
+       <auth ID="admin@core.collectionspace.org">YWRtaW5AY29yZS5jb2xsZWN0aW9uc3BhY2Uub3JnOkFkbWluaXN0cmF0b3I=</auth>
+    </auths>
+
+    <!-- commenting out... I think this runs from test code anyway...  
+         <run controlFile="./xml-replay-self-test.xml" testGroup="selftestGroup" />
+    -->
+</xmlReplayMaster>
+

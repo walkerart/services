@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Report schema (XSD)
+    
+    Entity  : Report
+    Part    : Common
+    Used for: JAXB binding between XML and Java objects
+
+    $LastChangedRevision: 2498 $
+    $LastChangedDate: 2010-06-16 14:47:45 -0700 (Wed, 16 Jun 2010) $
+-->
+
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="1.0" elementFormDefault="unqualified"
+  xmlns:ns="http://collectionspace.org/services/report"
+  xmlns="http://collectionspace.org/services/report"
+  targetNamespace="http://collectionspace.org/services/report"
+  version="0.1"
+>
+
+<!--
+    Avoid XmlRootElement nightmare:
+    See http://weblogs.java.net/blog/kohsuke/archive/2006/03/why_does_jaxb_p.html
+-->
+<!-- See http://wiki.collectionspace.org/display/collectionspace/Report+Schema -->    
+    
+    <!-- report  -->
+	<xs:element name="reports_common">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="csid" type="xs:string" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="notes" type="xs:string" />
+				<xs:element name="forDocTypes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="forDocType" type="xs:string"
+								minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="supportsNoContext" type="xs:boolean" />
+				<xs:element name="supportsSingleDoc" type="xs:boolean" />
+				<xs:element name="supportsDocList" type="xs:boolean" />
+				<xs:element name="supportsGroup" type="xs:boolean" />
+				<!-- NYI <xs:element name="supportsQuery" type="xs:boolean"/> -->
+				<xs:element name="filename" type="xs:string" />
+				<xs:element name="outputMIME" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    
+</xs:schema>
+

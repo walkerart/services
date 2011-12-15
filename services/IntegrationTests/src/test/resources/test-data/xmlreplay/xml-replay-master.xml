@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlReplayMaster>
+    <protoHostPort>http://localhost:8180</protoHostPort>
+    
+    <!-- legal values for dumpServiceResult=[minimal,detailed,full,auto] -->
+    <dump payloads="false" dumpServiceResult="auto" />
+    
+    <auths default="admin@core.collectionspace.org">
+       <auth ID="admin@core.collectionspace.org">YWRtaW5AY29yZS5jb2xsZWN0aW9uc3BhY2Uub3JnOkFkbWluaXN0cmF0b3I=</auth>
+    </auths>
+
+    <!--
+    This used to work, but for check-in, I'm commenting it out as it currently breaks if things are left around in DB.
+    <run controlFile="./security.xml" testGroup="security" />
+    -->
+
+    <!--
+    This was working but is not now because security db hangs onto results from failed tests.
+    However, it is more complete than testGroup="security", so is the correct testGroup to run.
+    When the DB is cleaned with [ant create_db import] it runs OK.
+    -->
+
+    <!-- run controlFile="./security.xml" testGroup="securityRemovingRoleperms" / -->
+    <!-- run controlFile="objectexit/object-exit.xml" testGroup="CRUDL" / -->
+    <!-- run controlFile="objectexit/object-exit.xml" testGroup="domwalk" / -->
+    <!--<run controlFile="media/media.xml" testGroup="authrefs" />-->
+
+    <!--<run controlFile="./organization.xml" testGroup="organization" />-->
+    
+    
+    <!-- ============================================= -->
+    <!-- XmlReplay now compatible with POX payloads.
+         File below this line have been ported. -->
+    <!-- ============================================= -->
+    
+    <run controlFile="./security.xml" testGroup="deleteBug" />
+    <run controlFile="objectexit/object-exit.xml" testGroup="makeone" />
+    <run controlFile="objectexit/object-exit.xml" testGroup="checkList" />
+    <run controlFile="objectexit/object-exit-display.xml" testGroup="refNameDisplayNameOnly" />
+    <run controlFile="collectionobject/collectionobject-adv-search.xml" testGroup="advSearchCommonSchema" />
+    <run controlFile="collectionobject/collectionobject-adv-search.xml" testGroup="advSearchExtensionSchema" />
+    <run controlFile="acquisitions/acquisitions.xml" testGroup="makeone" />
+    <run controlFile="acquisitions/acquisitions.xml" testGroup="testList" />
+    <run controlFile="relation/relation.xml" testGroup="makeRelations" />
+		<!-- No - this test is broken
+		<run controlFile="relation/relation.xml" testGroup="r2only" />
+		-->
+    <run controlFile="person/person.xml" testGroup="postPerson" />
+    <run controlFile="person/person.xml" testGroup="updatePerson" />
+    <run controlFile="person/person.xml" testGroup="PersonAddRelsDeleteRels" />
+    <run controlFile="location/location-hierarchy.xml" testGroup="HierarchicLocation" />
+    <run controlFile="organization/organization-hierarchy.xml" testGroup="HierarchicOrganization" />
+    <run controlFile="batch/batch.xml" />
+    <run controlFile="report/report.xml" />
+    <run controlFile="vocabulary/vocabulary.xml" testGroup="TestOrder" />
+		<run controlFile="authrefs/authrefs.xml" testGroup="AuthRefs" />
+		<run controlFile="authrefs/authrefsSimple.xml" testGroup="AuthRefsSimple" />
+		<run controlFile="authrefs/authrefsComplex.xml" testGroup="AuthRefsComplex" />
+
+    
+</xmlReplayMaster>
+

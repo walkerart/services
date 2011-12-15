@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="1.0" elementFormDefault="unqualified"
+  xmlns:ns="http://collectionspace.org/services/batch"
+  xmlns="http://collectionspace.org/services/batch"
+  targetNamespace="http://collectionspace.org/services/batch"
+  version="0.1"
+>
+
+<!--
+    Avoid XmlRootElement nightmare:
+    See http://weblogs.java.net/blog/kohsuke/archive/2006/03/why_does_jaxb_p.html
+-->
+<!-- See http://wiki.collectionspace.org/display/collectionspace/Loans+Out+Schema -->    
+    
+    <!-- batch -->
+	<xs:element name="batch_common">
+		<xs:complexType>
+			<xs:sequence>
+				<!-- Batch Information Group -->
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="notes" type="xs:string" />
+				<xs:element name="forDocTypes">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="forDocType" type="xs:string"
+								minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="supportsNoContext" type="xs:boolean" />
+				<xs:element name="forSingleDoc" type="xs:boolean" />
+				<xs:element name="createsNewFocus" type="xs:boolean" />
+				<xs:element name="className" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
+

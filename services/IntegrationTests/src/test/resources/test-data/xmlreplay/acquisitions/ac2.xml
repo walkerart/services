@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<document name="acquisitions">
+<ns3:acquisitions_common
+xmlns:ns2="http://collectionspace.org/services/jaxb"
+xmlns:ns3="http://collectionspace.org/services/acquisition">
+  <acquisitionDates>
+    <acquisitionDate>2010-11-15T07:30:24Z</acquisitionDate>
+    <acquisitionDate>2009-10-15T07:30:24Z</acquisitionDate>
+  </acquisitionDates>
+  <acquisitionReferenceNumber>acquisitionReferenceNumber-1292275631503</acquisitionReferenceNumber>
+  <owners>
+    <owner>Second Owner-1292275631503</owner>
+    <owner>First Owner -1292275631503</owner>
+  </owners>
+  <acquisitionSources>
+    <acquisitionSource>Museum Acquisition Source-1292275631503</acquisitionSource>
+    <acquisitionSource>Donor Acquisition Source-1292275631503</acquisitionSource>
+  </acquisitionSources>
+</ns3:acquisitions_common>
+</document>
+
+

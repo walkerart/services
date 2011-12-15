@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlReplay>
+    <auths>
+        <!-- IMPORTANT: THESE ARE STICKY :: THEY STICK AROUND UNTIL RESET, IN EXEC ORDER OF THIS FILE. -->
+        <auth ID="admin@core.collectionspace.org">YWRtaW5AY29yZS5jb2xsZWN0aW9uc3BhY2Uub3JnOkFkbWluaXN0cmF0b3I=</auth>
+    </auths>
+   
+    <testGroup ID="makeRelations" autoDeletePOSTS="true">
+         <test ID="oe1"  auth="test">
+             <method>POST</method>
+             <uri>/cspace-services/objectexit/</uri>
+             <filename>relation/oe1.xml</filename>
+         </test>
+         <test ID="oe2"  auth="test">
+             <method>POST</method>
+             <uri>/cspace-services/objectexit/</uri>
+             <filename>relation/oe1.xml</filename>
+         </test>
+         <test ID="relate1"  auth="test">
+             <method>POST</method>
+             <uri>/cspace-services/relations/</uri>
+             <filename>relation/r-1.xml</filename>
+             <vars>
+                <var ID="subjectCsid">${oe1.CSID}</var>
+                <var ID="objectCsid">${oe2.CSID}</var>
+                <var ID="subjectDocumentType">objectexit</var>
+                <var ID="objectDocumentType">objectexit</var>
+                <var ID="relationshipType">hasBroader</var>
+             </vars>
+         </test>
+         <test ID="relate2"  auth="test">
+             <method>POST</method>
+             <uri>/cspace-services/relations/</uri>
+             <filename>relation/r-1.xml</filename>
+             <vars>
+                <!-- switched oe2 and oe1 on this -->
+                <var ID="subjectCsid">${oe2.CSID}</var>
+                <var ID="objectCsid">${oe1.CSID}</var>
+                <var ID="subjectDocumentType">objectexit</var>
+                <var ID="objectDocumentType">objectexit</var>
+                <var ID="relationshipType">hasBroader</var>
+             </vars>
+         </test>
+         <test ID="relationsGET"  auth="test">
+             <method>GET</method>
+             <uri>/cspace-services/relations/</uri>
+         </test>
+         
+         <!--
+         <test>
+            <method>GET</method>
+            <uri>/cspace-services/personauthorities/${OrgAuth1.CSID}/items/${Org1.CSID}</uri>
+        </test>
+        -->
+    </testGroup>
+    
+    <testGroup ID="makeRelationsNested" autoDeletePOSTS="true">
+         <test ID="oe1"  auth="test">
+             <method>POST</method>
+             <uri>/cspace-services/objectexit/</uri>
+             <filename>relation/oe1.xml</filename>
+         </test>
+         <test ID="oe2"  auth="test">
+             <method>POST</method>
+             <uri>/cspace-services/objectexit/</uri>
+             <filename>relation/oe1.xml</filename>
+         </test>
+         <test ID="relate1"  auth="test">
+             <method>POST</method>
+             <uri>/cspace-services/relations/</uri>
+             <filename>relation/r-2.xml</filename>
+             <vars>
+                <var ID="subjectCsid">${oe1.CSID}</var>
+                <var ID="objectCsid">${itemCSID}</var>
+                <var ID="subjectDocumentType">ObjectExit</var>
+                <var ID="objectDocumentType">ObjectExit</var>
+                <var ID="relationshipType">hasBroader</var>
+             </vars>
+         </test>
+         <test ID="relationsGET"  auth="test">
+             <method>GET</method>
+             <uri>/cspace-services/relations/</uri>
+         </test>
+    </testGroup>
+         
+    <testGroup ID="r2only" autoDeletePOSTS="true">
+         <test ID="relate"  auth="test">
+             <method>POST</method>
+             <uri>/cspace-services/relations/</uri>
+             <filename>relation/r-2.xml</filename>
+             <vars>
+                <var ID="subjectCsid">1234-5678</var>
+                <var ID="objectCsid">${itemCSID}</var>
+                <var ID="subjectDocumentType">ObjectExit</var>
+                <var ID="objectDocumentType">ObjectExit</var>
+                <var ID="relationshipType">hasBroader</var>
+             </vars>
+         </test>
+         <test ID="relationsGET"  auth="test">
+             <method>GET</method>
+             <uri>/cspace-services/relations/</uri>
+         </test>
+    </testGroup>
+         
+</xmlReplay>
+        
+        

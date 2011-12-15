@@ -1,0 +1,86 @@
+
+<project name="trunk-install" default="package" basedir=".">
+    <description>
+        collectionspace services
+    </description>
+  <!-- set global properties for this build -->
+    <property name="services.trunk" value="../.."/>
+    <property file="build.properties" />
+    <property name="src" location="src"/>
+
+    <condition property="osfamily-unix">
+        <os family="unix" />
+    </condition>
+    <condition property="osfamily-windows">
+        <os family="windows" />
+    </condition>
+    
+    <target name="install"
+    	description="Installer: Copy artifacts for CollectionSpace Nuxeo doctypes">
+        <!-- cspace\server\cspace -->     
+        <copy todir="${jee.server.cspace}/cspace">
+            <fileset dir="${services.trunk}/${dist.server.cspace}/cspace"/>
+        </copy>
+        <!-- cspace\server\cspace\deploy -->     
+        <copy todir="${jee.server.cspace}/deploy">
+            <fileset dir="${services.trunk}/${dist.server.cspace}/deploy">
+            	<include name="*"/>
+            </fileset>
+        </copy>
+        <!-- cspace\server\cspace\lib -->      
+        <copy todir="${jee.server.cspace}/lib">
+            <fileset dir="${services.trunk}/${dist.server.cspace}/lib"/>
+        </copy>   
+        <!-- cspace\server\cspace\nuxeo-client\lib -->     
+        <copy todir="${jee.server.cspace}/nuxeo-client/lib">
+            <fileset dir="${services.trunk}/${dist.server.cspace}/nuxeo-client/lib">
+            	<include name="*.jar"/>
+						</fileset>
+        </copy>
+        <!-- cspace\server\cspace\nuxeo-client\lib (5.2GA) -->      
+        <copy todir="${jee.server.cspace}/nuxeo-client/lib">
+            <fileset dir="${services.trunk}/${dist.server.cspace}/nuxeo-client/lib/${nuxeo.release}">
+            	<include name="*.jar"/>
+						</fileset>
+        </copy>
+        <!-- Now execute the "install" target on the services -->
+				<ant antfile="services/build.xml" target="install" inheritAll="false"/>        
+    </target>    
+    
+    <target name="config" description="" depends="install">
+        <!-- Now execute the "install" target on the services -->
+				<ant antfile="services/build.xml" target="config" inheritAll="false"/>        
+    </target>    
+    
+    <target name="predeploy" depends="config">
+        <exec executable="echo">
+        		<arg value="Installer: Creating necessary databases and associated users and privileges." />
+				</exec>
+        <sql driver="${db.jdbc.driver.class}"
+        url="${db.jdbc.baseurl}"
+        userid="${db.user}"
+        password="${db.user.password}"
+        src="${db.script.dir}/init_db.sql">
+            <classpath>
+                <pathelement path="${db.driver.jar}"/>
+            </classpath>
+        </sql>
+				
+				<!-- Now, invoke the "predeploy" target on each of the services' install directories -->
+        <ant antfile="services/build.xml" target="predeploy" inheritAll="false"/>        	
+    </target>
+    
+    <target name="deploy" description="">
+				<!-- Now, invoke the "deploy" target on each of the services' install directories -->
+        <ant antfile="services/build.xml" target="deploy" inheritAll="false"/>        	
+    </target>     
+    	
+    <target name="postdeploy">
+        <exec executable="echo">
+        		<arg value="Installer: Executing installer's &apos;postdeploy&apos; target." />
+				</exec>
+				<!-- Now, invoke the "postdeploy" target on each of the services' install directories -->
+        <ant antfile="services/build.xml" target="postdeploy" inheritAll="false"/>
+    </target>
+
+</project>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document name="locations">
+  <ns2:locations_common xmlns:ns2="http://collectionspace.org/services/location" xmlns:ns3="http://collectionspace.org/services/jaxb">
+    <inAuthority>${inAuthority}</inAuthority>
+    <shortIdentifier>${shortIdentifier}</shortIdentifier>
+    <refName>urn:cspace:org.collectionspace.demo:locationauthority:name(${authShortIdentifier}):location:name(${shortIdentifier})'${name}'</refName>
+    <displayName>${name}</displayName>
+    <displayNameComputed>false</displayNameComputed>
+    <shortDisplayNameComputed>true</shortDisplayNameComputed>
+  </ns2:locations_common>
+  <ns3:relations-common-list xmlns:ns3="http://collectionspace.org/services/relation" xmlns:ns2="http://collectionspace.org/services/jaxb">
+    <relation-list-item>
+		<predicate>hasBroader</predicate>
+		<subject>
+		  <csid>${childCSID}</csid>
+		  <documentType>Locationitem</documentType>
+		</subject>
+		<object>
+		  <csid>${itemCSID}</csid>
+		  <documentType>Locationitem</documentType>
+		</object>
+	</relation-list-item>
+	<relation-list-item>
+		<predicate>hasBroader</predicate>
+		<subject>
+		  <csid>${child2CSID}</csid>
+		  <documentType>Locationitem</documentType>
+		</subject>
+		<object>
+		  <csid>${itemCSID}</csid>
+		  <documentType>Locationitem</documentType>
+		</object>
+	</relation-list-item>
+  </ns3:relations-common-list>
+</document>
+
+
