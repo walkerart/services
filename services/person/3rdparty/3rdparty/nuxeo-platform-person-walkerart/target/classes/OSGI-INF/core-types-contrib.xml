@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<component name="org.collectionspace.person.walkerart.coreTypes">
+	<extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+		<schema name="persons_walkerart" prefix="persons_walkerart" src="schemas/persons_walkerart.xsd"/>
+	</extension>
+	<extension target="org.nuxeo.ecm.core.schema.TypeService" point="doctype">
+		<doctype name="PersonTenant5" extends="Person">
+			<schema name="common"/>
+			<schema name="dublincore"/>
+			<schema name="collectionspace_core"/>
+			<schema name="persons_common"/>
+			<schema name="persons_walkerart"/>
+		</doctype>
+	</extension>
+	</component>
