@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<component name="org.collectionspace.organization.walkerart.ecm.platform.LifeCycleManagerExtensions">
+
+  <extension target="org.nuxeo.ecm.core.lifecycle.LifeCycleService" point="types">
+    <types>
+      <type name="OrganizationTenant5">default</type>
+    </types>
+  </extension>
+
+</component>
