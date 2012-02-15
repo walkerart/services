@@ -19,5 +19,6 @@
 
     <modules>
         <module>nuxeo-platform-cs-organization</module>
+        <module>nuxeo-platform-organization-walkerart</module>
     </modules>
 </project>
