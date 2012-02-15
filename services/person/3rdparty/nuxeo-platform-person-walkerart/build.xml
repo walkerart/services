@@ -13,7 +13,7 @@
     <property name="nuxeo.person.jar"
         value="org.collectionspace.services.person.3rdparty.walkerart.nuxeo-${cspace.release}.jar"/>
     <property name="nuxeo.person.jars.all"
-        value="org.collectionspace.services.person.3rdparty.nuxeo-*.jar"/>
+        value="org.collectionspace.services.person.3rdparty.*.nuxeo-*.jar"/>
 
     <condition property="osfamily-unix">
         <os family="unix" />
