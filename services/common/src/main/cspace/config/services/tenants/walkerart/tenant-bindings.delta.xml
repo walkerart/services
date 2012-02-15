@@ -13,7 +13,7 @@
                 <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="organizations_walkerart" updated="" order="3">
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/organization/local/walkerart"
-                            schemaLocation="http://collectionspace.org/services/organization/local/walkerart http://collectionspace.org/services/organization/local/organizations_walkerart.xsd" />
+                            schemaLocation="http://collectionspace.org/services/organization/local/walkerart/ http://collectionspace.org/services/organization/local/organizations_walkerart.xsd" />
                     </service:content>
                 </service:part>
                  
@@ -27,7 +27,7 @@
                 <service:part id="1" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="persons_walkerart" updated="" order="3">
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/persons/local/walkerart"
-                            schemaLocation="http://collectionspace.org/services/persons/local/walkerart http://collectionspace.org/services/persons/local/persons_walkerart.xsd" />
+                            schemaLocation="http://collectionspace.org/services/persons/local/walkerart/ http://collectionspace.org/services/persons/local/persons_walkerart.xsd" />
                     </service:content>
                 </service:part>
                  
