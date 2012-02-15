@@ -10,7 +10,7 @@
         <tenant:serviceBindings merge:matcher="id" id="Organizations">
             <service:object xmlns:service="http://collectionspace.org/services/common/service" >
                  
-                <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="organizations_walkerart" updated="" order="3">
+                <service:part id="1" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="organizations_walkerart" updated="" order="1">
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/organization/local/walkerart"
                             schemaLocation="http://collectionspace.org/services/organization/local/walkerart/ http://collectionspace.org/services/organization/local/organizations_walkerart.xsd" />
