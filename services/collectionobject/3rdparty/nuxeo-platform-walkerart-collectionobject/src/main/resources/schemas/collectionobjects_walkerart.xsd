@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    CollectionObject schema (XSD)
+    
+    Entity  : CollectionObject
+    Part    : Common
+    Used for: Nuxeo EP core document type
+
+    Summary of additions:
+    
+    collection| *
+    file format|
+    status + note + date *
+
+
+    $LastChangedRevision: 4736 $
+    $LastChangedDate: 2011-05-12 17:36:23 -0700 (Thu, 12 May 2011) $
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="http://collectionspace.org/collectionobject/"
+    xmlns="http://collectionspace.org/collectionobject/"
+    targetNamespace="http://collectionspace.org/collectionobject/" version="0.1">
+
+
+    <!-- TODO: make collection a select -->
+    <xs:element name="collection" type="xs:string"/>
+	 
+    <!-- TODO: make collection a select -->
+    <xs:element name="format" type="xs:string"/>
+
+    <!-- TODO: make status + note + date repeatable -->
+    <xs:element name="status" type="xs:string"/>
+    <xs:element name="notes" type="xs:string"/>
+    <xs:element name="date" type="xs:date"/>
+
+
+</xs:schema>
