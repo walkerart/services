@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Media schema (XSD)
+    
+    Entity  : Media
+    Part    : Common
+    Used for: Nuxeo EP core document type
+    Summary of additions:
+
+    method
+    status
+    preferred-+
+    notes.
+    last modified by
+    view depicted|
+    view description.
+    public-+
+
+
+
+
+    $LastChangedRevision: 2316 $
+    $LastChangedDate: 2010-06-02 16:03:51 -0700 (Wed, 02 Jun 2010) $
+-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="http://collectionspace.org/media/"
+    xmlns="http://collectionspace.org/media/"
+    targetNamespace="http://collectionspace.org/media/"
+    version="0.1">
+    
+    <xs:element name="method" type="xs:string"/>
+    <xs:element name="status" type="xs:string"/>
+    <xs:element name="preferred" type="xs:boolean"/>
+    <xs:element name="notes" type="xs:string"/>
+    <xs:element name="lastModifiedBy" type="xs:string"/>
+    <!-- TODO: make viewDepicted a select -->
+    <xs:element name="viewDepicted" type="xs:string"/>
+    <xs:element name="viewDescription" type="xs:string"/>
+    <xs:element name="public" type="xs:boolean"/>
+
+</xs:schema>
