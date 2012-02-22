@@ -8,15 +8,15 @@
     Used for: Nuxeo EP core document type
     Summary of additions:
 
-    method
-    status
-    preferred-+
-    notes.
+
     last modified by
+    method
+    notes.
+    preferred-+
+    public-+
+    status
     view depicted|
     view description.
-    public-+
-
 
 
 
@@ -31,14 +31,15 @@
     targetNamespace="http://collectionspace.org/media/"
     version="0.1">
     
-    <xs:element name="method" type="xs:string"/>
-    <xs:element name="status" type="xs:string"/>
-    <xs:element name="preferred" type="xs:boolean"/>
-    <xs:element name="notes" type="xs:string"/>
+
     <xs:element name="lastModifiedBy" type="xs:string"/>
+    <xs:element name="method" type="xs:string"/>
+    <xs:element name="notes" type="xs:string"/>
+    <xs:element name="preferred" type="xs:boolean"/>
+    <xs:element name="public" type="xs:boolean"/>
+    <xs:element name="status" type="xs:string"/>
     <!-- TODO: make viewDepicted a select -->
     <xs:element name="viewDepicted" type="xs:string"/>
     <xs:element name="viewDescription" type="xs:string"/>
-    <xs:element name="public" type="xs:boolean"/>
 
 </xs:schema>
