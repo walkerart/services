@@ -25,8 +25,8 @@
   targetNamespace="http://collectionspace.org/services/location"
   version="0.1"
 >
-    <xs:element name="onView" type="xs:boolean"/>
-    <xs:element name="onViewLocation" type="xs:string"/>
+    <xs:element name="onview" type="xs:string"/>
+    <xs:element name="onviewlocation" type="xs:string"/>
     
 </xs:schema>
 
