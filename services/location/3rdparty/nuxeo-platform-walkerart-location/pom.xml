@@ -17,9 +17,8 @@
     </description>
     
     <properties>
-        <!-- it this right, should ServiceName and DocType be here? -->
-        <!-- <ServiceName>location</ServiceName> -->
-        <!-- <NuxeoDocTypeName>Location</NuxeoDocTypeName> -->
+        <ServiceName>location</ServiceName>
+        <NuxeoDocTypeName>Location</NuxeoDocTypeName>
         <CommonSchemaName>location_walkerart</CommonSchemaName>
         <TenantId>5</TenantId>
         <TenantLabel>walkerart</TenantLabel>

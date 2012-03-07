@@ -19,9 +19,8 @@
     </description>
 
     <properties>
-        <!-- it this right, should ServiceName and DocType be here? -->
-        <!-- <ServiceName>media</ServiceName> -->
-        <!-- <NuxeoDocTypeName>Media</NuxeoDocTypeName> -->
+        <ServiceName>media</ServiceName>
+        <NuxeoDocTypeName>Media</NuxeoDocTypeName>
         <CommonSchemaName>media_walkerart</CommonSchemaName>
         <TenantId>5</TenantId>
         <TenantLabel>walkerart</TenantLabel>
