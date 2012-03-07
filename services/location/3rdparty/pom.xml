@@ -17,6 +17,17 @@
         3rd party build for location service
     </description>
 
+
+    <properties>
+        <ServiceName>location</ServiceName>
+        <NuxeoDocTypeName>Location</NuxeoDocTypeName>  
+        <CommonSchemaName>locations_common</CommonSchemaName>
+        <TenantPrefix>Tenant</TenantPrefix>
+    </properties>
+
+
+
+
     <modules>
         <module>nuxeo-platform-cs-location</module>
         <module>nuxeo-platform-walkerart-location</module>
