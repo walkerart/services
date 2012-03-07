@@ -7,6 +7,19 @@
         <tenant:repositoryDomain name="default-domain" storageName="walkerart-domain" repositoryClient="nuxeo-java" />
 
 
+        <tenant:serviceBindings merge:matcher="id" id="Media">
+            <service:object xmlns:service="http://collectionspace.org/services/common/service" >
+                 
+                <service:part id="1" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="medias_walkerart" updated="" order="1">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/medias/local/walkerart"
+                            schemaLocation="http://collectionspace.org/services/medias/local/walkerart/ http://collectionspace.org/services/persons/local/medias_walkerart.xsd" />
+                    </service:content>
+                </service:part>
+                 
+            </service:object>
+        </tenant:serviceBindings>
+
         <tenant:serviceBindings merge:matcher="id" id="Organizations">
             <service:object xmlns:service="http://collectionspace.org/services/common/service" >
                  
@@ -35,6 +48,8 @@
         </tenant:serviceBindings>
         
 
+
+
         <tenant:serviceBindings merge:matcher="id" id="Locations">
             <service:object xmlns:service="http://collectionspace.org/services/common/service" >
                  
@@ -48,20 +63,6 @@
             </service:object>
         </tenant:serviceBindings>
         
-
-        <tenant:serviceBindings merge:matcher="id" id="Media">
-            <service:object xmlns:service="http://collectionspace.org/services/common/service" >
-                 
-                <service:part id="1" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="medias_walkerart" updated="" order="1">
-                    <service:content contentType="application/xml">
-                        <service:xmlContent namespaceURI="http://collectionspace.org/services/medias/local/walkerart"
-                            schemaLocation="http://collectionspace.org/services/medias/local/walkerart/ http://collectionspace.org/services/persons/local/medias_walkerart.xsd" />
-                    </service:content>
-                </service:part>
-                 
-            </service:object>
-        </tenant:serviceBindings>
-
 
     </tenant:tenantBinding>
 	    	       
