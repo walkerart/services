@@ -14,6 +14,14 @@
     <name>services.media.3rdparty</name>
     <packaging>pom</packaging>
     
+
+    <properties>
+        <ServiceName>media</ServiceName>
+        <NuxeoDocTypeName>Media</NuxeoDocTypeName>  
+        <CommonSchemaName>medias_common</CommonSchemaName>
+        <TenantPrefix>Tenant</TenantPrefix>
+    </properties>
+
     <description>
         3rd party build for media service
     </description>
