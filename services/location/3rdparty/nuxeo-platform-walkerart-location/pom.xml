@@ -17,11 +17,9 @@
     </description>
     
     <properties>
-        <ServiceName>location</ServiceName>
-        <NuxeoDocTypeName>Location</NuxeoDocTypeName>
-        <CommonSchemaName>location_walkerart</CommonSchemaName>
-        <TenantId>5</TenantId>
-        <TenantLabel>walkerart</TenantLabel>
+      <CustomSchemaName>locations_walkerart</CustomSchemaName>
+      <TenantId>5</TenantId>
+      <TenantLabel>walkerart</TenantLabel>
     </properties>
 
     <build>
