@@ -2121,6 +2121,10 @@
         <service:params>
           <service:ListResultsFields>
 					<!-- Omit the standard AuthorityItem items (they are handled by the code) -->
+            <service:ListResultField>
+              <service:element>taxonFullName</service:element>
+              <service:xpath>taxonFullName</service:xpath>
+            </service:ListResultField>
           </service:ListResultsFields>
         </service:params>
       </service:DocHandlerParams>
