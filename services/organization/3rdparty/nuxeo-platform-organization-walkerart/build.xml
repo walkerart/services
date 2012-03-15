@@ -3,9 +3,7 @@
     <description>
         organization nuxeo document type for the walkerart tenant
     </description>
-
     <!-- set global properties for this build -->
-
     <property name="services.trunk" value="../../../.."/>
     <!-- environment should be declared before reading build.properties -->
     <property environment="env" />

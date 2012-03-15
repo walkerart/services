@@ -30,6 +30,6 @@
 
     <modules>
         <module>nuxeo-platform-cs-location</module>
-        <module>nuxeo-platform-walkerart-location</module>
+        <module>nuxeo-platform-location-walkerart</module>
     </modules>
 </project>
