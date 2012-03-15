@@ -18,10 +18,13 @@
     $LastChangedDate: 2011-05-12 17:36:23 -0700 (Thu, 12 May 2011) $
 -->
 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:ns="http://collectionspace.org/collectionobject/"
-    xmlns="http://collectionspace.org/collectionobject/"
-    targetNamespace="http://collectionspace.org/collectionobject/" version="0.1">
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="http://collectionspace.org/services/collectionobject/local/walkerart"
+    xmlns="http://collectionspace.org/services/collectionobject/local/walkerart"
+    targetNamespace="http://collectionspace.org/services/collectionobject/local/walkerart"
+    version="0.1"
+>
 
 
     <!-- TODO: make collection a select -->
