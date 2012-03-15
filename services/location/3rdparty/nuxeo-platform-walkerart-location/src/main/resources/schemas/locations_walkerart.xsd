@@ -20,9 +20,9 @@
 
 <xs:schema 
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:ns="http://collectionspace.org/services/location"
-  xmlns="http://collectionspace.org/services/location"
-  targetNamespace="http://collectionspace.org/services/location"
+  xmlns:ns="http://collectionspace.org/services/location/local/walkerart"
+  xmlns="http://collectionspace.org/services/location/local/walkerart"
+  targetNamespace="http://collectionspace.org/services/location/local/walkerart"
   version="0.1"
 >
     <xs:element name="onview" type="xs:string"/>
