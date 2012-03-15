@@ -1,5 +1,5 @@
 
-<project name="nuxeo-platform-walkerart-location" default="package" basedir=".">
+<project name="nuxeo-platform-location-walkerart" default="package" basedir=".">
     <description>
         location nuxeo document type
     </description>
