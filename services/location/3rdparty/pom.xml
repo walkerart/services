@@ -20,7 +20,7 @@
 
     <properties>
         <ServiceName>location</ServiceName>
-        <NuxeoDocTypeName>Location</NuxeoDocTypeName>  
+        <NuxeoDocTypeName>Locationitem</NuxeoDocTypeName>  
         <CommonSchemaName>locations_common</CommonSchemaName>
         <TenantPrefix>Tenant</TenantPrefix>
     </properties>
