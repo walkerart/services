@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ 
+<!--
+    Collectionobject Fine Arts schema (XSD)
+     
+    Entity  : Fine Arts
+    Part    : Domain extension schema for finearts
+    Used for: Nuxeo EP core document type
+ 
+-->
+ 
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="http://collectionspace.org/services/collectionobject/domain/finearts"
+  xmlns="http://collectionspace.org/services/collectionobject/domain/finearts"
+  targetNamespace="http://collectionspace.org/services/collectionobject/domain/finearts"
+  version="0.1"
+>
+    <xs:element name="faRelatedWorkLabel" type="xs:string"/>
+    <xs:element name="faOrientationDescription" type="xs:string"/>
+    <xs:element name="faOrientationRemarks" type="xs:string"/> 
+    <xs:element name="faStateDescription" type="xs:string"/>
+    <xs:element name="faDimensionsShape" type="xs:string"/> 
+    <xs:element name="faWatermark" type="xs:string"/>
+    <xs:element name="faCopyrightStatement" type="xs:string"/>
+    <xs:element name="faLegalStatuses" type="faLegalStatuses" />	
+    <xs:element name="faCreatorDescriptionGroupList" type="faCreatorDescriptionGroupList" />
+    <xs:element name="faMoulder" type="xs:string" />
+    
+    <xs:element name="faTopics">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="faTopic" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="faCreatorDescriptionGroupList">
+        <xs:sequence>
+            <xs:element name="faCreatorDescriptionGroup" type="faCreatorDescriptionGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="faCreatorDescriptionGroup">
+        <xs:sequence>
+            <xs:element name="faCreatorDescription" type="xs:string"/>
+            <xs:element name="faCreatorDescriptionLanguage" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>   
+        
+    <xs:complexType name="faLegalStatuses">
+        <xs:sequence>
+            <xs:element name="faLegalStatus" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- extensions replacing core fields-->
+    
+    <xs:element name="faObjectProductionPersonGroupList" type="faObjectProductionPersonGroupList"/>
+    
+     <xs:complexType name="faObjectProductionPersonGroupList">
+        <xs:sequence>
+            <xs:element name="faObjectProductionPersonGroup" type="faObjectProductionPersonGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="faObjectProductionPersonGroup">
+        <xs:sequence>
+            <xs:element name="faObjectProductionPerson" type="xs:string"/>
+            <xs:element name="faObjectProductionPersonRole" type="xs:string"/>
+            <xs:element name="faObjectProductionPersonQualifier" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>   
+
+    <xs:element name="faObjectProductionDateGroupList" type="faObjectProductionDateGroupList" />
+    
+    <xs:complexType name="faObjectProductionDateGroupList">
+        <xs:sequence>
+            <xs:element name="faObjectProductionDateGroup" type="faObjectProductionDateGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="faObjectProductionDateGroup">
+        <xs:sequence>
+            <xs:element name="faObjectProductionDate" type="structuredDateGroup" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="faObjectProductionDateQualifier" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>     
+    
+    <xs:element name="faObjectProductionNoteGroupList" type="faObjectProductionNoteGroupList" />
+    
+    <xs:complexType name="faObjectProductionNoteGroupList">
+        <xs:sequence>
+            <xs:element name="faObjectProductionNoteGroup" type="faObjectProductionNoteGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="faObjectProductionNoteGroup">
+        <xs:sequence>
+            <xs:element name="faObjectProductionNote" type="xs:string"/>
+            <xs:element name="faObjectProductionNoteLanguage" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>   
+    
+    <xs:complexType name="structuredDateGroup">
+        <xs:sequence>
+            <xs:element name="dateDisplayDate" type="xs:string"/>
+            <xs:element name="dateAssociation" type="xs:string"/>
+            <xs:element name="dateEarliestSingleYear" type="xs:integer"/>
+            <xs:element name="dateEarliestSingleMonth" type="xs:integer"/>
+            <xs:element name="dateEarliestSingleDay" type="xs:integer"/>
+            <xs:element name="dateEarliestSingleEra" type="xs:string"/>
+            <xs:element name="dateEarliestSingleCertainty" type="xs:string"/>
+            <xs:element name="dateEarliestSingleQualifier" type="xs:string"/>
+            <xs:element name="dateEarliestSingleQualifierValue" type="xs:integer"/>
+            <xs:element name="dateEarliestSingleQualifierUnit" type="xs:string"/>
+            <xs:element name="dateLatestYear" type="xs:integer"/>
+            <xs:element name="dateLatestMonth" type="xs:integer"/>
+            <xs:element name="dateLatestDay" type="xs:integer"/>
+            <xs:element name="dateLatestEra" type="xs:string"/>
+            <xs:element name="dateLatestCertainty" type="xs:string"/>
+            <xs:element name="dateLatestQualifier" type="xs:string"/>
+            <xs:element name="dateLatestQualifierValue" type="xs:integer"/>
+            <xs:element name="dateLatestQualifierUnit" type="xs:string"/>
+            <xs:element name="datePeriod" type="xs:string"/>
+            <xs:element name="dateNote" type="xs:string"/>
+            <xs:element name="dateEarliestScalarValue" type="xs:date"/>
+            <xs:element name="dateLatestScalarValue" type="xs:date"/>
+            <xs:element name="scalarValuesComputed" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="faMaterialGroupList" type="faMaterialGroupList"/>
+    
+    <xs:complexType name="faMaterialGroupList">
+        <xs:sequence>
+            <xs:element name="faMaterialGroup" type="faMaterialGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="faMaterialGroup">
+        <xs:sequence>
+            <xs:element name="faMaterial" type="xs:string"/>
+            <xs:element name="faMaterialRole" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="faProductionTechniqueGroupList" type="faProductionTechniqueGroupList"/>
+    
+    <xs:complexType name="faProductionTechniqueGroupList">
+        <xs:sequence>
+            <xs:element name="faProductionTechniqueGroup" type="faProductionTechniqueGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="faProductionTechniqueGroup">
+        <xs:sequence>
+            <xs:element name="faProductionTechnique" type="xs:string"/>
+            <xs:element name="faProductionTechniqueLanguage" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType> 
+    
+    <xs:element name="faRelatedWorkLabelGroupList" type="faRelatedWorkLabelGroupList"/>
+    
+    <xs:complexType name="faRelatedWorkLabelGroupList">
+        <xs:sequence>
+            <xs:element name="faRelatedWorkLabelGroup" type="faRelatedWorkLabelGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="faRelatedWorkLabelGroup">
+        <xs:sequence>
+            <xs:element name="faRelatedWorkLabel" type="xs:string"/>
+            <xs:element name="faRelatedWorkLabelLanguage" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType> 
+    
+    <xs:element name="faContentNoteGroupList" type="faContentNoteGroupList"/>
+    
+    <xs:complexType name="faContentNoteGroupList">
+        <xs:sequence>
+            <xs:element name="faContentNoteGroup" type="faContentNoteGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="faContentNoteGroup">
+        <xs:sequence>
+            <xs:element name="faContentNote" type="xs:string"/>
+            <xs:element name="faContentNoteLanguage" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>     
+    
+    <!--  end extensions replacing core fields-->
+</xs:schema>
