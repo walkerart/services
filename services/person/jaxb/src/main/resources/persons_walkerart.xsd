@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Person schema (XSD)
+    
+    Entity  : Person
+    Part    : Walkerart Extension
+    Used for: JAX-B bindings
+    
+-->
+
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="http://collectionspace.org/services/person/local/walkerart"
+  xmlns="http://collectionspace.org/services/person/local/walkerart"
+  targetNamespace="http://collectionspace.org/services/person/local/walkerart"
+  version="0.1"
+>
+
+<!-- person object for walkerart local  -->
+    <xs:element name="persons_walkerart">
+        <xs:complexType>
+        	<xs:sequence>
+        	
+				<xs:element name="employer" type="xs:string" />
+				<xs:element name="assistant" type="xs:string"/>
+				
+			</xs:sequence>
+   		</xs:complexType>
+   </xs:element>
+
+    
+
+</xs:schema>
+
