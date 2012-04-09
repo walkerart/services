@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<component name="org.collectionspace.collectionobject.performingarts.coreTypes">
+	<extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+		<schema name="collectionobjects_performingarts" prefix="collectionobjects_performingarts" src="schemas/collectionobjects_performingarts.xsd"/>
+	</extension>
+</component>

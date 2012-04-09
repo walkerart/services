@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ 
+<!--
+    Collectionobject Fine Arts schema (XSD)
+     
+    Entity  : Fine Arts
+    Part    : Domain extension schema for performingarts
+    Used for: Nuxeo EP core document type
+ 
+-->
+ 
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="http://collectionspace.org/services/collectionobject/domain/performingarts"
+  xmlns="http://collectionspace.org/services/collectionobject/domain/performingarts"
+  targetNamespace="http://collectionspace.org/services/collectionobject/domain/performingarts"
+  version="0.1"
+>
+
+</xs:schema>
+
+<!-- finearts schema: -->
+
+<!-- faRelatedWorkLabel -->
+<!-- faOrientationDescription -->
+<!-- faOrientationRemarks -->
+<!-- faStateDescription -->
+<!-- faDimensionsShape -->
+<!-- faWatermark -->
+<!-- faCopyrightStatement -->
+<!-- faLegalStatuses -->
+<!-- faCreatorDescriptionGroupList -->
+<!-- faMoulder -->
+<!-- faTopics > faTopic -->
+<!-- faCreatorDescriptionGroupList > faCreatorDescriptionGroup -->
+<!-- faCreatorDescriptionGroup > faCreatorDescription, faCreatorDescriptionLanguage -->
+<!-- faLegalStatuses > faLegalStatus -->
+<!-- faObjectProductionPersonGroupList -->
+<!-- faObjectProductionPersonGroupList -->
+<!-- faObjectProductionPersonGroup -->
+<!-- faObjectProductionPersonGroup -->
+<!-- faObjectProductionPerson -->
+<!-- faObjectProductionPersonRole -->
+<!-- faObjectProductionPersonQualifier -->
+<!-- faObjectProductionDateGroupList -->
+<!-- faObjectProductionDateGroupList -->
+<!-- faObjectProductionDateGroup -->
+<!-- faObjectProductionDateGroup -->
+<!-- faObjectProductionDate -->
+<!-- faObjectProductionDateQualifier -->
+<!-- faObjectProductionNoteGroupList -->
+<!-- faObjectProductionNoteGroupList -->
+<!-- faObjectProductionNoteGroup -->
+<!-- faObjectProductionNoteGroup -->
+<!-- faObjectProductionNote -->
+<!-- faObjectProductionNoteLanguage -->
+<!-- structuredDateGroup -->
+<!-- dateDisplayDate -->
+<!-- dateAssociation -->
+<!-- dateEarliestSingleYear -->
+<!-- dateEarliestSingleMonth -->
+<!-- dateEarliestSingleDay -->
+<!-- dateEarliestSingleEra -->
+<!-- dateEarliestSingleCertainty -->
+<!-- dateEarliestSingleQualifier -->
+<!-- dateEarliestSingleQualifierValue -->
+<!-- dateEarliestSingleQualifierUnit -->
+<!-- dateLatestYear -->
+<!-- dateLatestMonth -->
+<!-- dateLatestDay -->
+<!-- dateLatestEra -->
+<!-- dateLatestCertainty -->
+<!-- dateLatestQualifier -->
+<!-- dateLatestQualifierValue -->
+<!-- dateLatestQualifierUnit -->
+<!-- datePeriod -->
+<!-- dateNote -->
+<!-- dateEarliestScalarValue -->
+<!-- dateLatestScalarValue -->
+<!-- scalarValuesComputed -->
+<!-- faMaterialGroupList -->
+<!-- faMaterialGroupList -->
+<!-- faMaterialGroup -->
+<!-- faMaterialGroup -->
+<!-- faMaterial -->
+<!-- faMaterialRole -->
+<!-- faProductionTechniqueGroupList -->
+<!-- faProductionTechniqueGroupList -->
+<!-- faProductionTechniqueGroup -->
+<!-- faProductionTechniqueGroup -->
+<!-- faProductionTechnique -->
+<!-- faProductionTechniqueLanguage -->
+<!-- faRelatedWorkLabelGroupList -->
+<!-- faRelatedWorkLabelGroupList -->
+<!-- faRelatedWorkLabelGroup -->
+<!-- faRelatedWorkLabelGroup -->
+<!-- faRelatedWorkLabel -->
+<!-- faRelatedWorkLabelLanguage -->
+<!-- faContentNoteGroupList -->
+<!-- faContentNoteGroupList -->
+<!-- faContentNoteGroup -->
+<!-- faContentNoteGroup -->
+<!-- faContentNote -->
+<!-- faContentNoteLanguage -->
