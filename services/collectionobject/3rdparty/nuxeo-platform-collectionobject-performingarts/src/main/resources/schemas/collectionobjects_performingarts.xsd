@@ -17,6 +17,8 @@
   version="0.1"
 >
 
+    <xs:element name="worldPremiere" type="xs:boolean"/>
+
 </xs:schema>
 
 <!-- finearts schema: -->
