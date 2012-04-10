@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
  
 <!--
-    Collectionobject Fine Arts schema (XSD)
+    Collectionobject Performing Arts schema (XSD)
      
-    Entity  : Fine Arts
+    Entity  : Performing Arts
     Part    : Domain extension schema for performingarts
     Used for: Nuxeo EP core document type
  
