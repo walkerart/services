@@ -18,9 +18,7 @@
 
 
     <properties>
-        <ServiceName>collectionobject</ServiceName>
     	<CustomSchemaName>collectionobjects_finearts</CustomSchemaName>
-        <NuxeoDocTypeName>CollectionObject</NuxeoDocTypeName> 
     	<TenantLabel>finearts</TenantLabel>
     </properties>
 
