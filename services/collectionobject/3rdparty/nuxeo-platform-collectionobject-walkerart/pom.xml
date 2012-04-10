@@ -17,6 +17,7 @@
     </description>
     
     <properties>
+        <ServiceName>collectionobject</ServiceName>
         <CustomSchemaName>collectionobjects_walkerart</CustomSchemaName>
         <TenantId>5</TenantId>
         <TenantLabel>walkerart</TenantLabel>
