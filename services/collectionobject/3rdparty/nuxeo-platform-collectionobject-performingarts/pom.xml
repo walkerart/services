@@ -15,6 +15,13 @@
     <description>
         CollectionObject Nuxeo document type for the Performing Arts Domain
     </description>
+
+    <properties>
+    	<CustomSchemaName>collectionobjects_performingarts</CustomSchemaName>
+        <TenantId>5</TenantId>
+    	<TenantLabel>walkerart</TenantLabel>
+    </properties>
+
     
     <build>
 	    <resources>
@@ -47,9 +54,5 @@
             </plugin>
         </plugins>
     </build>
-    <properties>
-    	<CustomSchemaName>collectionobjects_performingarts</CustomSchemaName>
-    	<TenantLabel>performingarts</TenantLabel>
-    </properties>
     
 </project>
