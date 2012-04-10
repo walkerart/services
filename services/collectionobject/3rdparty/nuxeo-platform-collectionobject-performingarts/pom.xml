@@ -18,6 +18,7 @@
 
     <properties>
     	<CustomSchemaName>collectionobjects_performingarts</CustomSchemaName>
+        <NuxeoDocTypeName>CollectionObject</NuxeoDocTypeName> 
         <TenantId>5</TenantId>
     	<TenantLabel>walkerart</TenantLabel>
     </properties>
