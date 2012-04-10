@@ -1,5 +1,5 @@
 
-<project name="nuxeo-platform-collectionobjects-finearts" default="package" basedir=".">
+<project name="nuxeo-platform-collectionobjects-performingarts" default="package" basedir=".">
     <description>
         Collectionobjects Nuxeo document type for the Performing Arts domain
     </description>
