@@ -19,7 +19,7 @@
 
 
     <properties>
-        <ServiceName>CollectionObjects</ServiceName>
+        <ServiceName>collectionobject</ServiceName>
         <NuxeoDocTypeName>CollectionObject</NuxeoDocTypeName>  
     	<CustomSchemaName>collectionobjects_finearts</CustomSchemaName>
     	<TenantLabel>finearts</TenantLabel>
