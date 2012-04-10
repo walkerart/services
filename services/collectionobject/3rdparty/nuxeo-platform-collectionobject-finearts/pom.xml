@@ -15,6 +15,14 @@
     <description>
         CollectionObject Nuxeo document type for the Fine Arts Domain
     </description>
+
+
+    <properties>
+    	<CustomSchemaName>collectionobjects_finearts</CustomSchemaName>
+        <TenantId>5</TenantId>
+    	<TenantLabel>walkerart</TenantLabel>
+    </properties>
+
     
     <build>
 	    <resources>
@@ -47,9 +55,5 @@
             </plugin>
         </plugins>
     </build>
-    <properties>
-    	<CustomSchemaName>collectionobjects_finearts</CustomSchemaName>
-    	<TenantLabel>finearts</TenantLabel>
-    </properties>
     
 </project>
