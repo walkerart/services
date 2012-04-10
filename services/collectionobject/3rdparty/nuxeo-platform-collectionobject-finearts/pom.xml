@@ -20,8 +20,7 @@
     <properties>
     	<CustomSchemaName>collectionobjects_finearts</CustomSchemaName>
         <NuxeoDocTypeName>CollectionObject</NuxeoDocTypeName> 
-        <TenantId>5</TenantId>
-    	<TenantLabel>walkerart</TenantLabel>
+    	<TenantLabel>finearts</TenantLabel>
     </properties>
 
     
