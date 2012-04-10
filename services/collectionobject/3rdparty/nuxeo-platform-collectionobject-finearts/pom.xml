@@ -17,9 +17,13 @@
     </description>
 
 
+
     <properties>
+        <ServiceName>CollectionObjects</ServiceName>
+        <NuxeoDocTypeName>CollectionObject</NuxeoDocTypeName>  
     	<CustomSchemaName>collectionobjects_finearts</CustomSchemaName>
     	<TenantLabel>finearts</TenantLabel>
+        <CommonSchemaName>collections_common</CommonSchemaName>
     </properties>
 
     
