@@ -16,15 +16,13 @@
         CollectionObject Nuxeo document type for the Fine Arts Domain
     </description>
 
-
-
     <properties>
         <ServiceName>collectionobject</ServiceName>
-        <NuxeoDocTypeName>CollectionObject</NuxeoDocTypeName>  
     	<CustomSchemaName>collectionobjects_finearts</CustomSchemaName>
+        <NuxeoDocTypeName>CollectionObject</NuxeoDocTypeName>
     	<TenantLabel>finearts</TenantLabel>
-        <CommonSchemaName>collections_common</CommonSchemaName>
     </properties>
+
 
     
     <build>
