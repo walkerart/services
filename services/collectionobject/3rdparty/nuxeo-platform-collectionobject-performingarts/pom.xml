@@ -17,9 +17,7 @@
     </description>
 
     <properties>
-        <ServiceName>collectionobject</ServiceName>
     	<CustomSchemaName>collectionobjects_performingarts</CustomSchemaName>
-        <NuxeoDocTypeName>CollectionObject</NuxeoDocTypeName> 
     	<TenantLabel>performingarts</TenantLabel>
     </properties>
 
