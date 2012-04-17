@@ -10,6 +10,8 @@
         <layout>heading</layout>
         <layout>collectionspace_core</layout>
         <layout>${CommonSchemaName}</layout>
+        <layout>collectionobjects_performingarts</layout>
+        <layout>collectionobjects_finearts</layout>
 		<layout>${CustomSchemaName}</layout>
       </layouts>
     </type>
