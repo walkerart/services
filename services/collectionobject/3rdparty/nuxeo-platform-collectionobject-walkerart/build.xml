@@ -1,5 +1,5 @@
 
-<project name="nuxeo-platform-collectionobjects_walkerart" default="package" basedir=".">
+<project name="nuxeo-platform-collectionobjects-walkerart" default="package" basedir=".">
     <description>
         CollectionobjectsCommon Nuxeo document type for walkerart tenant
     </description>
@@ -15,7 +15,7 @@
     <property name="nuxeo.collectionobject.jar"
         value="org.collectionspace.services.collectionobject.3rdparty.walkerart.nuxeo-${cspace.release}.jar"/>
     <property name="nuxeo.collectionobject.jars.all"
-        value="org.collectionspace.services.collectionobject.*.nuxeo-${cspace.release}.jar"/>
+        value="org.collectionspace.services.collectionobject.3rdparty.*.nuxeo-*.jar"/>
 
     <condition property="osfamily-unix">
         <os family="unix" />
