@@ -4,6 +4,8 @@
 
   <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
     point="layouts">
+    <layout name="collectionobjects_finearts"></layout>
+    <layout name="collectionobjects_performingarts"></layout>
 
     <layout name="${CustomSchemaName}">
 	<!-- Insert layout settings for the custom schema here. -->
