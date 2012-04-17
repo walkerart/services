@@ -10,8 +10,9 @@ Require-Bundle: org.nuxeo.runtime,
  org.nuxeo.ecm.core,
  org.nuxeo.ecm.webapp.core,
  org.collectionspace.collectionspace_core,
- org.collectionspace.${ServiceName}
- org.collectionspace.collectionobject.walkerart 
+ org.collectionspace.${ServiceName},
+ org.collectionspace.collectionobject.performingarts,
+ org.collectionspace.collectionobject.finearts
 Provide-Package: org.collectionspace.${ServiceName}.${TenantLabel}
 Nuxeo-Component: OSGI-INF/core-types-contrib.xml,
  OSGI-INF/life-cycle-contrib.xml,
