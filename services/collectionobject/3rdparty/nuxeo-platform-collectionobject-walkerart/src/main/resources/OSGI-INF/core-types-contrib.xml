@@ -9,6 +9,8 @@
 			<schema name="dublincore"/>
 			<schema name="collectionspace_core"/>
 			<schema name="${CommonSchemaName}"/>
+            <schema name="collectionobjects_performingarts"/>
+            <schema name="collectionobjects_finearts"/>
 			<schema name="${CustomSchemaName}"/>
 		</doctype>
 	</extension>
