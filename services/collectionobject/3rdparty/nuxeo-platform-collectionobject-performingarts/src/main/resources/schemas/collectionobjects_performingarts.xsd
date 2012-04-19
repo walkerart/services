@@ -17,7 +17,8 @@
   version="0.1"
 >
 
-    <xs:element name="worldPremiere" type="xs:boolean"/>
+    <xs:element name="worldPremiere" type="xs:string"/>
+    <xs:element name="yearReleased" type="xs:string"/>
 
 </xs:schema>
 
