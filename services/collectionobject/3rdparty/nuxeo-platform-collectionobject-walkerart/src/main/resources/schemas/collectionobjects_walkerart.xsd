@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+  CollectionObject schema (XSD)
+  
+  Entity  : CollectionObject
+  Part    : Local - Walker Arts Center
+  Used for: Nuxeo EP core document type
+-->
+
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="http://collectionspace.org/services/collectionobject/local/walkerart"
+  xmlns="http://collectionspace.org/services/collectionobject/local/walkerart"
+  targetNamespace="http://collectionspace.org/services/collectionobject/local/walkerart"
+  version="0.1">
+
+    <xs:element name="format" type="xs:string"/>
+    <xs:element name="catalogNumber" type="xs:string"/>
+
+    <xs:element name="collectionsWAC">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="collectionWAC" type="xs:string"
+                    minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
