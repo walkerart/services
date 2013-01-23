@@ -271,10 +271,10 @@
                         </types:item>
                         <!-- The materialComponent field may become part of a repeatable sub-group -->
                         <!-- per CSPACE-4563. -->
-                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
                             <types:value>materialGroupList/*/materialComponent</types:value>
-                        </types:item>
+                        </types:item-->
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
                             <types:value>materialGroupList/*/materialSource</types:value>
@@ -283,10 +283,10 @@
                             <types:key>authRef</types:key>
                             <types:value>styles|style</types:value>
                         </types:item>
-                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
                             <types:value>objectComponentGroupList/*/objectComponentName</types:value>
-                        </types:item>
+                        </types:item-->
                         <!-- Object Production Information group -->
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
