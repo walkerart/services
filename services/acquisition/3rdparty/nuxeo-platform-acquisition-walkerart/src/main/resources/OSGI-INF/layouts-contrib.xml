@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<component name="org.collectionspace.acquisitions_walkerart.layouts.webapp">
+
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
+
+    <layout name="acquisition">
+      <!--
+      <templates>
+        <template mode="any">/layouts/layout_default_template.xhtml</template>
+      </templates>
+      -->
+    </layout>
+  </extension>
+</component>
