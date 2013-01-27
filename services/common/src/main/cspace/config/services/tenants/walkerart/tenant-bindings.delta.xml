@@ -30,6 +30,23 @@
             </service:object>
         </tenant:serviceBindings>
 
+        <tenant:serviceBindings merge:matcher="id" id="Persons">
+            <service:object xmlns:service="http://collectionspace.org/services/config/service" >
+                 <service:properties>
+                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        <types:key>termRef</types:key>
+                        <types:value>associationWAC</types:value>
+                    </types:item>
+                </service:properties>
+                <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="persons_walkerart" updated="" order="3">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/person/local/walkerart" 
+                            schemaLocation="http://collectionspace.org/services/person/local/walkerart http://collectionspace.org/services/person/local/persons_walkerart.xsd" />
+                    </service:content>
+                </service:part>
+            </service:object>
+        </tenant:serviceBindings>
+
         <tenant:serviceBindings merge:matcher="id" id="Acquisitions">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
                 <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="acquisitions_walkerart" updated="" order="3">

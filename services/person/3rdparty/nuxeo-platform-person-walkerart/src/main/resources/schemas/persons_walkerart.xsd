@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+  Person schema (XSD)
+  
+  Entity  : Person
+  Part    : Local - Walker Art Center
+  Used for: Nuxeo EP core document type
+-->
+
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="http://collectionspace.org/services/person/local/walkerart"
+  xmlns="http://collectionspace.org/services/person/local/walkerart"
+  targetNamespace="http://collectionspace.org/services/person/local/walkerart"
+  version="0.1">
+
+  <xs:element name="businessWAC" type="xs:string"/>
+  <xs:element name="associationWAC" type="xs:string"/>
+  <xs:element name="assistantWAC" type="xs:string"/>
+
+</xs:schema>
