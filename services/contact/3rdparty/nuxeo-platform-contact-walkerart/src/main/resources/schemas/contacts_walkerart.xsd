@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Contact schema (XSD)
+    
+    Entity  : Contact
+    Part    : Local - Walker Art Center
+    Used for: Nuxeo EP core document type
+
+-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="http://collectionspace.org/services/contact/local/walkerart"
+    xmlns="http://collectionspace.org/services/contact/local/walkerart"
+    targetNamespace="http://collectionspace.org/services/contact/local/walkerart"
+    version="0.1">
+
+    <xs:element name="addressGroupListWAC" type="addressGroupListWAC"/>
+    
+    <xs:complexType name="addressGroupListWAC">
+        <xs:sequence>
+            <xs:element name="addressGroupWAC" type="addressGroupWAC" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addressGroupWAC">
+        <xs:sequence>
+            <xs:element name="addressPlace1WAC" type="xs:string"/>
+            <xs:element name="addressPlace2WAC" type="xs:string"/>
+            <xs:element name="addressMunicipalityWAC" type="xs:string"/>
+            <xs:element name="addressStateOrProvinceWAC" type="xs:string"/>
+            <xs:element name="addressPostCodeWAC" type="xs:string"/>
+            <xs:element name="addressCountryWAC" type="xs:string"/>
+            <xs:element name="addressTypeWAC" type="xs:string"/>
+            <xs:element name="addressTextWAC" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

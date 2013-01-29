@@ -63,6 +63,35 @@
             </service:object>
         </tenant:serviceBindings>
 
+        <tenant:serviceBindings merge:matcher="id" id="Contacts">
+            <service:object xmlns:service="http://collectionspace.org/services/config/service" >
+                <service:properties>
+                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        <types:key>authRef</types:key>
+                        <types:value>addressGroupListWAC/*/addressMunicipalityWAC</types:value>
+                    </types:item>
+                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        <types:key>authRef</types:key>
+                        <types:value>addressGroupListWAC/*/addressStateOrProvinceWAC</types:value>
+                    </types:item>
+                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        <types:key>termRef</types:key>
+                        <types:value>addressGroupListWAC/*/addressCountryWAC</types:value>
+                    </types:item>
+                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        <types:key>termRef</types:key>
+                        <types:value>addressGroupListWAC/*/addressTypeWAC</types:value>
+                    </types:item>
+                </service:properties>
+                <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="contacts_walkerart" updated="" order="3">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/contact/local/walkerart" 
+                            schemaLocation="http://collectionspace.org/services/contact/local/walkerart http://collectionspace.org/services/contact/local/contacts_walkerart.xsd" />
+                    </service:content>
+                </service:part>
+            </service:object>
+        </tenant:serviceBindings>
+
     </tenant:tenantBinding>
                    
 </tenant:TenantBindingConfig>

@@ -17,7 +17,16 @@
         3rd party build for contact service
     </description>
 
+    <properties>
+        <ServiceName>contact</ServiceName>
+        <NuxeoDocTypeName>Contact</NuxeoDocTypeName>   
+        <CommonSchemaName>contacts_common</CommonSchemaName>
+        <TenantPrefix>Tenant</TenantPrefix>
+        <Lifecycle>cs_default</Lifecycle>
+    </properties>
+
     <modules>
         <module>nuxeo-platform-cs-contact</module>
+        <module>nuxeo-platform-contact-walkerart</module>
     </modules>
 </project>

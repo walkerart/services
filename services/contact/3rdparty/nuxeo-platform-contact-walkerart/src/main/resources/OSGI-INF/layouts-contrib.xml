@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<component name="org.collectionspace.contact.layouts.webapp">
+
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
+
+    <layout name="contact">
+      <!--
+      
+     -->
+    </layout>
+  </extension>
+</component>
