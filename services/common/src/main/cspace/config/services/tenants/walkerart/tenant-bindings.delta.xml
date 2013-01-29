@@ -66,14 +66,14 @@
         <tenant:serviceBindings merge:matcher="id" id="Contacts">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
                 <service:properties>
-                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                    <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
                         <types:key>authRef</types:key>
                         <types:value>addressGroupListWAC/*/addressMunicipalityWAC</types:value>
-                    </types:item>
-                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                    </types:item-->
+                    <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
                         <types:key>authRef</types:key>
                         <types:value>addressGroupListWAC/*/addressStateOrProvinceWAC</types:value>
-                    </types:item>
+                    </types:item-->
                     <types:item xmlns:types="http://collectionspace.org/services/config/types">
                         <types:key>termRef</types:key>
                         <types:value>addressGroupListWAC/*/addressCountryWAC</types:value>
