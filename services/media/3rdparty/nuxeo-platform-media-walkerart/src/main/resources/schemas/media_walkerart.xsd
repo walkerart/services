@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Media schema (XSD)
+    
+    Entity  : Media
+    Part    : Local - Walker Art Center
+    Used for: Nuxeo EP core document type
+
+-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="http://collectionspace.org/services/media/local/walkerart"
+    xmlns="http://collectionspace.org/services/media/local/walkerart"
+    targetNamespace="http://collectionspace.org/services/media/local/walkerart"
+    version="0.1">
+    
+    <!-- See http://wiki.collectionspace.org/display/collectionspace/Media+Handling+Schema -->
+
+    <!--  Media Information Group -->
+
+    <xs:element name="methodWAC" type="xs:string"/>
+    <xs:element name="statusWAC" type="xs:boolean"/>
+    <xs:element name="preferredWAC" type="xs:boolean"/>
+    <xs:element name="remarksWAC" type="xs:string"/>
+    <xs:element name="lastModifiedByWAC" type="xs:string"/>
+    <xs:element name="viewDepictedWAC" type="xs:string"/>
+    <xs:element name="viewDescriptionWAC" type="xs:string"/>
+    <xs:element name="publicallyAccessibleWAC" type="xs:boolean"/>
+
+</xs:schema>

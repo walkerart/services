@@ -30,9 +30,25 @@
             </service:object>
         </tenant:serviceBindings>
 
+        <tenant:serviceBindings merge:matcher="id" id="Media">
+            <service:object xmlns:service="http://collectionspace.org/services/config/service" >
+                <service:properties>
+                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        <types:key>authRef</types:key>
+                        <types:value>lastModifiedByWAC</types:value>
+                    </types:item>
+                </service:properties>
+                <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="media_walkerart" updated="" order="3">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/media/local/mmi" schemaLocation="http://collectionspace.org/services/media/local/walkerart http://collectionspace.org/services/media/local/media_walkerart.xsd" />
+                    </service:content>
+                </service:part>
+            </service:object>
+        </tenant:serviceBindings>
+
         <tenant:serviceBindings merge:matcher="id" id="Persons">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
-                 <service:properties>
+                <service:properties>
                     <types:item xmlns:types="http://collectionspace.org/services/config/types">
                         <types:key>termRef</types:key>
                         <types:value>associationWAC</types:value>

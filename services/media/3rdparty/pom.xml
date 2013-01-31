@@ -18,7 +18,16 @@
         3rd party build for media service
     </description>
 
+    <properties>
+        <ServiceName>media</ServiceName>
+        <NuxeoDocTypeName>Media</NuxeoDocTypeName>   
+        <CommonSchemaName>media_common</CommonSchemaName>
+        <TenantPrefix>Tenant</TenantPrefix>
+        <Lifecycle>cs_default</Lifecycle>
+    </properties>
+
     <modules>
         <module>nuxeo-platform-cs-media</module>
+        <module>nuxeo-platform-media-walkerart</module>
     </modules>
 </project>
