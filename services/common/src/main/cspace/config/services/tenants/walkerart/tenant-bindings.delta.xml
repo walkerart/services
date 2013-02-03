@@ -71,6 +71,14 @@
                             <types:key>authRef</types:key>
                             <types:value>insuredByGroupWAC|insuredByWAC</types:value>
                         </types:item>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>authRef</types:key>
+                            <types:value>acquisitionFundingWACList/*/acquisitionFundingSourceWAC</types:value>
+                        </types:item>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>acquisitionFundingWACList/*/acquisitionFundingCurrencyWAC</types:value>
+                        </types:item>
                     </service:properties>
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/acquisition/local/walkerart" schemaLocation="http://collectionspace.org/services/acquisition/local/walkerart http://collectionspace.org/services/acquisition/local/acquisitions_walkerart.xsd" />

@@ -24,4 +24,23 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="acquisitionFundingWACList" type="acquisitionFundingWACList"/>
+
+    <xs:complexType name="acquisitionFundingWACList">
+        <xs:sequence>
+            <xs:element name="acquisitionFundingWAC" type="acquisitionFundingWAC" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="acquisitionFundingWAC">
+        <xs:sequence>
+                <xs:element name="acquisitionFundingCurrencyWAC" type="xs:string"/>
+                <xs:element name="acquisitionFundingValueWAC" type="xs:decimal"/>
+                <xs:element name="acquisitionFundingCostWAC" type="xs:decimal"/>
+                <xs:element name="acquisitionFundingSourceWAC" type="xs:string"/>
+                <xs:element name="acquisitionFundingSourceProvisosWAC" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
 </xs:schema>
