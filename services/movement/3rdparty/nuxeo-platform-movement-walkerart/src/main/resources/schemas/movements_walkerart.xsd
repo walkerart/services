@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Movement schema (XSD)
+    
+    Entity  : Movement
+    Part    : Local - Walker Art Center
+    Used for: Nuxeo EP core document type
+
+-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="http://collectionspace.org/services/movement/local/walkerart"
+    xmlns="http://collectionspace.org/services/movement/local/walkerart"
+    targetNamespace="http://collectionspace.org/services/movement/local/walkerart"
+    version="0.1">
+    
+    <!-- See http://wiki.collectionspace.org/display/collectionspace/Location+and+Movement+Control+Schema -->
+    
+    <!--  Object Location Information Group -->
+    <xs:element name="onViewWAC" type="xs:boolean"/>
+    <xs:element name="onViewLocationWAC" type="xs:string"/>
+    
+</xs:schema>
