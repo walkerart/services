@@ -32,13 +32,13 @@
 
         <tenant:serviceBindings merge:matcher="id" id="Media">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
-                <service:properties>
-                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
-                        <types:key>authRef</types:key>
-                        <types:value>lastModifiedByWAC</types:value>
-                    </types:item>
-                </service:properties>
-                <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="media_walkerart" updated="" order="3">
+                <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="media_walkerart" updated="" order="3">
+                    <service:properties>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>authRef</types:key>
+                            <types:value>lastModifiedByWAC</types:value>
+                        </types:item>
+                    </service:properties>
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/media/local/walkerart" schemaLocation="http://collectionspace.org/services/media/local/walkerart http://collectionspace.org/services/media/local/media_walkerart.xsd" />
                     </service:content>
@@ -48,13 +48,13 @@
 
         <tenant:serviceBindings merge:matcher="id" id="Movements">
             <service:object xmlns:service="http://collectionspace.org/services/config/service">
-                <service:properties>
-                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
-                        <types:key>termRef</types:key>
-                        <types:value>onViewLocationWAC</types:value>
-                    </types:item>
-                </service:properties>
-                <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="movements_walkerart" updated="" order="3">
+                <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="movements_walkerart" updated="" order="3">
+                    <service:properties>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>onViewLocationWAC</types:value>
+                        </types:item>
+                    </service:properties>
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/movement/local/walkerart" schemaLocation="http://collectionspace.org/services/movement/local/walkerart http://collectionspace.org/services/movement/local/movements_walkerart.xsd" />
                     </service:content>
@@ -64,13 +64,13 @@
 
         <tenant:serviceBindings merge:matcher="id" id="Persons">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
-                <service:properties>
-                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
-                        <types:key>termRef</types:key>
-                        <types:value>associationWAC</types:value>
-                    </types:item>
-                </service:properties>
-                <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="persons_walkerart" updated="" order="3">
+                <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="persons_walkerart" updated="" order="3">
+                    <service:properties>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>associationWAC</types:value>
+                        </types:item>
+                    </service:properties>
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/person/local/walkerart" 
                             schemaLocation="http://collectionspace.org/services/person/local/walkerart http://collectionspace.org/services/person/local/persons_walkerart.xsd" />
@@ -81,7 +81,7 @@
 
         <tenant:serviceBindings merge:matcher="id" id="Acquisitions">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
-                <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="acquisitions_walkerart" updated="" order="3">
+                <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="acquisitions_walkerart" updated="" order="3">
                     <service:properties>
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
@@ -105,25 +105,25 @@
 
         <tenant:serviceBindings merge:matcher="id" id="Contacts">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
-                <service:properties>
-                    <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
-                        <types:key>authRef</types:key>
-                        <types:value>addressGroupListWAC/*/addressMunicipalityWAC</types:value>
-                    </types:item-->
-                    <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
-                        <types:key>authRef</types:key>
-                        <types:value>addressGroupListWAC/*/addressStateOrProvinceWAC</types:value>
-                    </types:item-->
-                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
-                        <types:key>termRef</types:key>
-                        <types:value>addressGroupListWAC/*/addressCountryWAC</types:value>
-                    </types:item>
-                    <types:item xmlns:types="http://collectionspace.org/services/config/types">
-                        <types:key>termRef</types:key>
-                        <types:value>addressGroupListWAC/*/addressTypeWAC</types:value>
-                    </types:item>
-                </service:properties>
-                <service:part id="5" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="contacts_walkerart" updated="" order="3">
+                <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="contacts_walkerart" updated="" order="3">
+                    <service:properties>
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>authRef</types:key>
+                            <types:value>addressGroupListWAC/*/addressMunicipalityWAC</types:value>
+                        </types:item-->
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>authRef</types:key>
+                            <types:value>addressGroupListWAC/*/addressStateOrProvinceWAC</types:value>
+                        </types:item-->
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>addressGroupListWAC/*/addressCountryWAC</types:value>
+                        </types:item>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>addressGroupListWAC/*/addressTypeWAC</types:value>
+                        </types:item>
+                    </service:properties>
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/contact/local/walkerart" 
                             schemaLocation="http://collectionspace.org/services/contact/local/walkerart http://collectionspace.org/services/contact/local/contacts_walkerart.xsd" />
