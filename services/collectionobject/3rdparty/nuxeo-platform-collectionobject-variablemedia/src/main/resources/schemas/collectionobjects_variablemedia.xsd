@@ -93,7 +93,7 @@
                         <xs:element name="playbackHardware" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
-            </xs:element<name />
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
