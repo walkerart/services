@@ -19,10 +19,10 @@
 
     <!-- Technical Specification / Film and Video Components Info Group -->
     <xs:element name="originalFormatGroupList" type="originalFormatGroupList"/>
-    <xs:element name="copiesProvidedonAcquisition">
+    <xs:element name="copiesProvidedOnAcquisition">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="copyProvidedonAcquisition" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="copyProvidedOnAcquisition" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
