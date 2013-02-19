@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+  CollectionObject schema (XSD)
+  
+  Entity  : CollectionObject
+  Part    : Domain extension schema for variable media
+  Used for: Nuxeo EP core document type
+-->
+
+<!-- http://wiki.collectionspace.org/display/deploy/Cataloging+Schema+Extension+-+Variable+Media -->
+
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ns="http://collectionspace.org/services/collectionobject/domain/variablemedia"
+  xmlns="http://collectionspace.org/services/collectionobject/domain/variablemedia"
+  targetNamespace="http://collectionspace.org/services/collectionobject/domain/variablemedia"
+  version="0.1">
+
+    <!-- Technical Specification / Film and Video Components Info Group -->
+    <xs:element name="originalFormatGroupList" type="originalFormatGroupList"/>
+    <xs:element name="copiesProvidedOnAcquisition">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="copyProvidedOnAcquisition" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Technical Specification / Digital Works Info Group -->
+    <xs:element name="digitalWorksGroupList" type="digitalWorksGroupList"/>
+
+
+    <!-- Repeating Groups -->
+    <!-- =================================================================
+        Original Format Group repeating structure
+        ================================================================= -->
+    <xs:complexType name="originalFormatGroupList">
+        <xs:sequence>
+            <xs:element name="originalFormatGroup" type="originalFormatGroup" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="originalFormatGroup">
+        <xs:sequence>
+            <xs:element name="originalFormat" type="xs:string"/>
+            <xs:element name="originalAudioFormat" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!-- =================================================================
+        Digital Works Group repeating structure
+        ================================================================= -->
+    <xs:complexType name="digitalWorksGroupList">
+        <xs:sequence>
+            <xs:element name="digitalWorksGroup" type="digitalWorksGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="digitalWorksGroup">
+        <xs:sequence>
+            <xs:element name="programmingLanguageSubGroupList" type="programmingLanguageSubGroupList"/>
+            <xs:element name="compressionSystemsUsed">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="compressionSystemUsed" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ratioFormats">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ratioFormat" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nonStandardCode" type="xs:string"/>
+            <xs:element name="sourcesOfExternalData" type="xs:string"/>
+            <xs:element name="preferredScreenResolutionSubGroupList" type="preferredScreenResolutionSubGroupList"/>
+            <xs:element name="creationHardwares">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="creationHardware" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="playbackHardwares">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="playbackHardware" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- =================================================================
+        Programming Languages Sub-Group repeating structure
+        ================================================================= -->
+    <xs:complexType name="programmingLanguageSubGroupList">
+        <xs:sequence>
+            <xs:element name="programmingLanguageSubGroup" type="programmingLanguageSubGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="programmingLanguageSubGroup">
+        <xs:sequence>
+            <xs:element name="programmingLanguage" type="xs:string"/>
+            <xs:element name="authoringEnvironment" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- =================================================================
+        Preferred Screen Resolution Sub-Group repeating structure
+        ================================================================= -->
+    <xs:complexType name="preferredScreenResolutionSubGroupList">
+        <xs:sequence>
+            <xs:element name="preferredScreenResolutionSubGroup" type="preferredScreenResolutionSubGroup" minOccurs="0"
+                maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="preferredScreenResolutionSubGroup">
+        <xs:sequence>
+            <xs:element name="preferredScreenResolution" type="xs:string"/>
+            <xs:element name="preferredColorPalette" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
