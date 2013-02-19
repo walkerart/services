@@ -121,7 +121,6 @@
         <ant antfile="${nuxeo-platform-collectionobject-variablemedia}/build.xml" target="deploy" inheritall="false"/>
         <ant antfile="${nuxeo-platform-collectionobject-walkerart}/build.xml" target="deploy" inheritall="false"/>
     </target>
-    </target>
 
     <target name="undeploy"
     description="undeploy collectionobject from ${jee.server.nuxeo}">
