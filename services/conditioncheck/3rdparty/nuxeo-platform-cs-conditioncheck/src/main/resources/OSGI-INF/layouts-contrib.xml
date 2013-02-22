@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<!--
+layouts-contrib.xml
+
+Layout file for configuring screen layouts in the
+user interface of Nuxeo EP's web application, for
+viewing or editing CollectionSpace records stored
+in the Nuxeo repository,
+
+See the "Nuxeo Book" for an introductory description
+of how to edit this file.  For instance, for Nuxeo EP 5.3:
+http://doc.nuxeo.org/5.3/books/nuxeo-book/html/
+
+-->
+
+<component name="org.collectionspace.conditioncheck.layouts.webapp">
+
+    <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+               point="layouts">
+
+        <layout name="conditioncheck">
+            <!--
+            <templates>
+                <template mode="any">/layouts/layout_default_template.xhtml</template>
+            </templates>
+            -->
+        </layout>
+    </extension>
+</component>
