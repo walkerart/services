@@ -9,12 +9,52 @@
         <tenant:serviceBindings merge:matcher="id" id="CollectionObjects">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
                 <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="collectionobjects_variablemedia" updated="" order="3">
-                    <!--service:properties>
+                    <service:properties>
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
-                            <types:key>authRef</types:key>
-                            <types:value>fieldName</types:value>
+                            <types:key>termRef</types:key>
+                            <types:value>originalFormatGroupList/*/originalFormat</types:value>
                         </types:item>
-                    </service:properties-->
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>originalFormatGroupList/*/originalAudioFormat</types:value>
+                        </types:item-->
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>copiesProvidedOnAcquisition|copyProvidedOnAcquisition</types:value>
+                        </types:item-->
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>programmingLanguageSubGroupList/*/programmingLanguage</types:value>
+                        </types:item>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>programmingLanguageSubGroupList/*/authoringEnvironment</types:value>
+                        </types:item>
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>compressionSystemsUsed|compressionSystemUsed</types:value>
+                        </types:item-->
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>ratioFormats|ratioFormat</types:value>
+                        </types:item>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>preferredScreenResolutionSubGroupList/*/preferredScreenResolution</types:value>
+                        </types:item>
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>preferredScreenResolutionSubGroupList/*/preferredColorPalette</types:value>
+                        </types:item>
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>creationHardwares|creationHardware</types:value>
+                        </types:item-->
+                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>playbackHardwares|playbackHardware</types:value>
+                        </types:item>
+                    </service:properties>
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/collectionobject/domain/variablemedia" 
                             schemaLocation="http://collectionspace.org/services/collectionobject/domain/variablemedia http://collectionspace.org/services/collectionobject/domain/collectionobjects_variablemedia.xsd" />
