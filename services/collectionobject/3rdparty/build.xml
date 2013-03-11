@@ -12,7 +12,7 @@
 	<property name="nuxeo-platform-collectionobject-lifesci" value="nuxeo-platform-collectionobject-lifesci"/>
     <property name="nuxeo-platform-collectionobject-variablemedia" value="nuxeo-platform-collectionobject-variablemedia"/>
     <property name="nuxeo-platform-collectionobject-walkerart" value="nuxeo-platform-collectionobject-walkerart"/>
-    <property name="mvn.opts" value="" />
+    <property name="mvn.opts" value="-V" />
     <property name="src" location="src"/>
     <property name="build" location="build"/>
 
