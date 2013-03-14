@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<component name="org.collectionspace.exhibition.ecm.types">
+  <extension target="org.nuxeo.ecm.platform.types.TypeService" point="types">
+    <type id="Exhibitionauthority" coretype="Exhibitionauthority">
+      <label>org.collectionspace.exhibitionauthority</label>
+      <!--icon>/icons/file.gif</icon-->
+      <default-view>view_documents</default-view>
+
+      <layouts mode="any">
+        <layout>heading</layout>
+        <layout>csexhibitionauthority</layout>
+      </layouts>
+    </type>
+
+    <type id="Folder" coretype="Folder">
+      <subtypes>
+        <type>Exhibitionauthority</type>
+      </subtypes>
+    </type>
+    
+    <type id="Workspace" coretype="Workspace">
+      <subtypes>
+        <type>Exhibitionauthority</type>
+      </subtypes>
+    </type>
+
+  </extension>
+  <extension target="org.nuxeo.ecm.platform.types.TypeService" point="types">
+    <type id="Exhibitionitem" coretype="Exhibitionitem">
+      <label>org.collectionspace.exhibition</label>
+      <!--icon>/icons/file.gif</icon-->
+      <default-view>view_documents</default-view>
+
+      <layouts mode="any">
+        <layout>heading</layout>
+        <layout>exhibition</layout>
+      </layouts>
+    </type>
+
+    <type id="Folder" coretype="Folder">
+      <subtypes>
+        <type>Exhibition</type>
+      </subtypes>
+    </type>
+    
+    <type id="Workspace" coretype="Workspace">
+      <subtypes>
+        <type>Exhibition</type>
+      </subtypes>
+    </type>
+
+  </extension>
+</component>

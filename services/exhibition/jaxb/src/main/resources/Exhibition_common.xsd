@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Exhibition schema (XSD)
+
+    Entity  : Exhibition
+    Part    : Common
+    Used for: JAXB binding between XML and Java objects
+-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+    jaxb:version="1.0" elementFormDefault="unqualified"
+    xmlns:ns="http://collectionspace.org/services/exhibition"
+    xmlns="http://collectionspace.org/services/exhibition"
+    targetNamespace="http://collectionspace.org/services/exhibition"
+    version="0.1"
+>
+    
+    <!-- avoid XmlRootElement nightnmare, see http://weblogs.java.net/blog/kohsuke/archive/2006/03/why_does_jaxb_p.html-->
+    <!-- See http://wiki.collectionspace.org/display/collectionspace/Exhibition+Authority+Schema -->    
+    
+    <!-- Exhibition -->
+    <xs:element name="exhibitions_common">
+        <xs:complexType>
+            <xs:sequence>
+                <!--  Common identifier -->
+                <xs:element name="csid" type="xs:string" />
+
+                <!--  Common Authority Information Group -->
+                <!--  inAuthority is the csid of the owning ExhibitionAuthority -->
+                <xs:element name="inAuthority" type="xs:string"/>
+                <xs:element name="shortIdentifier" type="xs:string"/>
+                <xs:element name="refName" type="xs:string"/>
+
+                <xs:element name="exhibitionStartDate" type="xs:string"/>
+                <xs:element name="exhibitionEndDate" type="xs:string"/>
+                <xs:element name="exhibitionRemarks" type="xs:string"/>
+                
+                <!-- Term Information repeatable group -->
+                <xs:element name="exhibitionTermGroupList" type="exhibitionTermGroupList"/>
+
+                <!-- List of Exhibition Organizers -->
+                <xs:element name="exhibitionOrganizers" type="exhibitionOrganizersList"/>
+
+                <!-- List of Exhibition Sponsors -->
+                <xs:element name="exhibitionSponsors" type="exhibitionSponsorsList"/>
+
+                <!-- List of Exhibition Locations Internal -->
+                <xs:element name="exhibitionLocationsInternal" type="exhibitionLocationsInternalList"/>
+
+                <!-- List of Exhibition Locations External -->
+                <xs:element name="exhibitionLocationsExternal" type="exhibitionLocationsExternalList"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<!-- =================================================================
+     Exhibition Term Group repeating structure
+     ================================================================= -->
+
+    <xs:complexType name="exhibitionTermGroupList">
+        <xs:sequence>
+            <xs:element name="exhibitionTermGroup" type="exhibitionTermGroup" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="exhibitionTermGroup">
+        <xs:sequence>
+            <!-- Common across all authority item terms -->
+            <xs:element name="termDisplayName" type="xs:string"/>
+            <xs:element name="termFormattedDisplayName" type="xs:string"/>
+            <xs:element name="termName" type="xs:string"/>
+            <xs:element name="termType" type="xs:string"/>
+            <xs:element name="termStatus" type="xs:string"/>
+            <xs:element name="termQualifier" type="xs:string"/>
+            <xs:element name="termLanguage" type="xs:string"/>
+            <xs:element name="termPrefForLang" type="xs:boolean"/>
+            <xs:element name="termSource" type="xs:string"/>
+            <xs:element name="termSourceDetail" type="xs:string"/>
+            <xs:element name="termSourceID" type="xs:string"/>
+            <xs:element name="termSourceNote" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- =================================================================
+     Exhibition Organizers repeating structure
+     ================================================================= -->
+
+    <xs:complexType name="exhibitionOrganizersList">
+        <xs:sequence>
+            <xs:element name="exhibitionOrganizer" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- =================================================================
+     Exhibition sponsors repeating structure
+     ================================================================= -->
+
+    <xs:complexType name="exhibitionSponsorsList">
+        <xs:sequence>
+            <xs:element name="exhibitionSponsor" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- =================================================================
+     Exhibition Locations Internal repeating structure
+     ================================================================= -->
+
+    <xs:complexType name="exhibitionLocationsInternalList">
+        <xs:sequence>
+            <xs:element name="exhibitionLocationInterna" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- =================================================================
+     Exhibition Locations External repeating structure
+     ================================================================= -->
+
+    <xs:complexType name="exhibitionLocationsExternalList">
+        <xs:sequence>
+            <xs:element name="exhibitionLocationExterna" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

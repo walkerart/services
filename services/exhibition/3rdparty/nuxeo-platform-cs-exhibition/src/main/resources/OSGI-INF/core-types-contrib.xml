@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<component name="org.collectionspace.exhibition.coreTypes">
+    <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+        <schema name="exhibitionauthorities_common" prefix="exhibitionauthorities_common" src="schemas/exhibitionauthorities_common.xsd"/>
+    </extension>
+    <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+        <schema name="exhibitions_common" prefix="exhibitions_common" src="schemas/exhibitions_common.xsd"/>
+    </extension>
+    <extension target="org.nuxeo.ecm.core.schema.TypeService" point="doctype">
+        <doctype name="Exhibitionauthority" extends="Document">
+            <schema name="common"/>
+            <schema name="collectionspace_core"/>
+            <schema name="dublincore"/>
+            <schema name="exhibitionauthorities_common"/>
+        </doctype>
+    </extension>
+    <extension target="org.nuxeo.ecm.core.schema.TypeService" point="doctype">
+        <doctype name="Exhibitionitem" extends="Document">
+            <schema name="common"/>
+            <schema name="collectionspace_core"/>
+            <schema name="dublincore"/>
+            <schema name="exhibitions_common"/>
+            <prefetch>
+                exhibitions_common:exhibitionTermGroupList/0/termDisplayName
+                exhibitions_common:refName
+                exhibitions_common:shortIdentifier
+            </prefetch>
+        </doctype>
+    </extension>
+</component>
