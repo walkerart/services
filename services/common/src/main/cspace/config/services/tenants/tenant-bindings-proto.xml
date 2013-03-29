@@ -2786,7 +2786,7 @@
                         </types:item>
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
-                            <types:value>exhibitionSponsors|exhibitionSponsor</types:value>
+                            <types:value>exhibitionCurators|exhibitionCurator</types:value>
                         </types:item>
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
@@ -2794,25 +2794,29 @@
                         </types:item>
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
-                            <types:value>exhibitionLocationsExternal|exhibitionLocationExternal</types:value>
+                            <types:value>exhibitionVenueGroupList/*/venueName</types:value>
                         </types:item>
                         <!-- Fields containing term list / controlled vocabulary references -->
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>termRef</types:key>
-                            <types:value>exhibitionTermGroupList/*/termType</types:value> 
+                            <types:value>exhibitionTermGroupList/*/termType</types:value>
                         </types:item>
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                            <types:key>termRef</types:key>
+                            <types:value>exhibitionPublication</types:value>
+                        </types:item>
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>termRef</types:key>
                             <types:value>exhibitionTermGroupList/*/termStatus</types:value> 
-                        </types:item>
-                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        </types:item-->
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>termRef</types:key>
                             <types:value>exhibitionTermGroupList/*/termLanguage</types:value> 
-                        </types:item>
-                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                        </types:item-->
+                        <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>termRef</types:key>
                             <types:value>exhibitionTermGroupList/*/termSource</types:value>
-                        </types:item>
+                        </types:item-->
                     </service:properties>
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/exhibition" schemaLocation="http://collectionspace.org/services/exhibition http://services.collectionspace.org/exhibition/exhibitions_common.xsd"/>

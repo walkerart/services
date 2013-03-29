@@ -34,24 +34,31 @@
                 <xs:element name="shortIdentifier" type="xs:string"/>
                 <xs:element name="refName" type="xs:string"/>
 
-                <xs:element name="exhibitionStartDate" type="xs:string"/>
-                <xs:element name="exhibitionEndDate" type="xs:string"/>
-                <xs:element name="exhibitionRemarks" type="xs:string"/>
-                
                 <!-- Term Information repeatable group -->
                 <xs:element name="exhibitionTermGroupList" type="exhibitionTermGroupList"/>
 
                 <!-- List of Exhibition Organizers -->
-                <xs:element name="exhibitionOrganizers" type="exhibitionOrganizersList"/>
+                <xs:element name="exhibitionOrganizers" type="exhibitionOrganizerList"/>
 
-                <!-- List of Exhibition Sponsors -->
-                <xs:element name="exhibitionSponsors" type="exhibitionSponsorsList"/>
+                <!-- Exhibition Venue Repeatable Group -->
+                <xs:element name="exhibitionVenueGroupList" type="exhibitionVenueGroupList"/>
 
                 <!-- List of Exhibition Locations Internal -->
-                <xs:element name="exhibitionLocationsInternal" type="exhibitionLocationsInternalList"/>
+                <xs:element name="exhibitionLocationsInternal" type="exhibitionLocationInternalList"/>
 
-                <!-- List of Exhibition Locations External -->
-                <xs:element name="exhibitionLocationsExternal" type="exhibitionLocationsExternalList"/>
+                <!-- List of Exhibition Curators -->
+                <xs:element name="exhibitionCurators" type="exhibitionCuratorList"/>
+
+                <xs:element name="exhibitionPublication" type="xs:string"/>
+
+                <!-- List of Exhibition Catalogues -->
+                <xs:element name="exhibitionCatalogues" type="exhibitionCatalogueList"/>
+
+                <!-- List of Exhibition Links -->
+                <xs:element name="exhibitionLinks" type="exhibitionLinkList"/>
+
+                <xs:element name="exhibitionRemarks" type="xs:string"/>
+
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -69,6 +76,7 @@
     <xs:complexType name="exhibitionTermGroup">
         <xs:sequence>
             <!-- Common across all authority item terms -->
+            <!-- Exhibition uses only a few of the common term group fields in the UI -->
             <xs:element name="termDisplayName" type="xs:string"/>
             <xs:element name="termFormattedDisplayName" type="xs:string"/>
             <xs:element name="termName" type="xs:string"/>
@@ -88,19 +96,28 @@
      Exhibition Organizers repeating structure
      ================================================================= -->
 
-    <xs:complexType name="exhibitionOrganizersList">
+    <xs:complexType name="exhibitionOrganizerList">
         <xs:sequence>
             <xs:element name="exhibitionOrganizer" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
 <!-- =================================================================
-     Exhibition sponsors repeating structure
+     Exhibition Venues Group repeating structure
      ================================================================= -->
 
-    <xs:complexType name="exhibitionSponsorsList">
+    <xs:complexType name="exhibitionVenueGroupList">
         <xs:sequence>
-            <xs:element name="exhibitionSponsor" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="exhibitionVenueGroup" type="exhibitionVenueGroup" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="exhibitionVenueGroup">
+        <xs:sequence>
+            <xs:element name="venueName" type="xs:string"/>
+            <xs:element name="venueStartDate" type="xs:date"/>
+            <xs:element name="venueEndDate" type="xs:date"/>
+            <xs:element name="venueAttendance" type="xs:integer"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -108,19 +125,39 @@
      Exhibition Locations Internal repeating structure
      ================================================================= -->
 
-    <xs:complexType name="exhibitionLocationsInternalList">
+    <xs:complexType name="exhibitionLocationInternalList">
         <xs:sequence>
-            <xs:element name="exhibitionLocationInterna" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="exhibitionLocationInternal" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
 <!-- =================================================================
-     Exhibition Locations External repeating structure
+     Exhibition Curators repeating structure
      ================================================================= -->
 
-    <xs:complexType name="exhibitionLocationsExternalList">
+    <xs:complexType name="exhibitionCuratorList">
         <xs:sequence>
-            <xs:element name="exhibitionLocationExterna" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="exhibitionCurator" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- =================================================================
+     Exhibition Catalogues repeating structure
+     ================================================================= -->
+
+    <xs:complexType name="exhibitionCatalogueList">
+        <xs:sequence>
+            <xs:element name="exhibitionCatalogue" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- =================================================================
+     Exhibition Links repeating structure
+     ================================================================= -->
+
+    <xs:complexType name="exhibitionLinkList">
+        <xs:sequence>
+            <xs:element name="exhibitionLink" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 

@@ -107,7 +107,7 @@ public class ExhibitionAuthorityClientUtils {
         }
         if(logger.isDebugEnabled()){
             logger.debug("Creating item with display name: \"" + displayName
-                    +"\" in locationAuthority: \"" + vcsid +"\"");
+                    +"\" in exhibitionAuthority: \"" + vcsid +"\"");
         }
         PoxPayloadOut multipart = 
             createExhibitionInstance( exhibitionAuthorityRefName,

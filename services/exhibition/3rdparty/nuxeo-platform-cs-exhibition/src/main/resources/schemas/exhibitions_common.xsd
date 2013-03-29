@@ -24,10 +24,6 @@
     <xs:element name="exhibitionTermGroupList" type="exhibitionTermGroupList"/>
 
     <!--  Common Exhibition Information Group -->
-    <xs:element name="exhibitionStartDate" type="xs:date"/>
-    <xs:element name="exhibitionEndDate" type="xs:date"/>
-    <xs:element name="exhibitionRemarks" type="xs:string"/>
-
     <xs:element name="exhibitionOrganizers">
         <xs:complexType>
             <xs:sequence>
@@ -36,13 +32,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="exhibitionSponsors">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="exhibitionSponsor" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name="exhibitionVenueGroupList" type="exhibitionVenueGroupList"/>
 
     <xs:element name="exhibitionLocationsInternal">
         <xs:complexType>
@@ -52,13 +42,51 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="exhibitionLocationsExternal">
+    <xs:element name="exhibitionCurators">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="exhibitionLocationExternal" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="exhibitionCurator" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    
+    <xs:element name="exhibitionPublication" type="xs:string"/>
+    
+    <xs:element name="exhibitionCatalogues">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="exhibitionCatalogue" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="exhibitionLinks">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="exhibitionLink" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="exhibitionRemarks" type="xs:string"/>
+
+<!-- =================================================================
+     Exhibition Venue Group repeating structure
+     ================================================================= -->
+
+    <xs:complexType name="exhibitionVenueGroupList">
+        <xs:sequence>
+            <xs:element name="exhibitionVenueGroup" type="exhibitionVenueGroup" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="exhibitionVenueGroup">
+        <xs:sequence>
+            <xs:element name="venueName" type="xs:string"/>
+            <xs:element name="venueStartDate" type="xs:date"/>
+            <xs:element name="venueEndDate" type="xs:date"/>
+            <xs:element name="venueAttendance" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
 
 <!-- =================================================================
      Exhibition Term Group repeating structure
@@ -73,6 +101,7 @@
     <xs:complexType name="exhibitionTermGroup">
         <xs:sequence>
             <!-- Common across all authority item terms -->
+            <!-- Exhibition uses only a few of the common term group fields in the UI -->
             <xs:element name="termDisplayName" type="xs:string"/>
             <xs:element name="termFormattedDisplayName" type="xs:string"/>
             <xs:element name="termName" type="xs:string"/>

@@ -81,10 +81,10 @@ public class ExhibitionAuthorityServiceTest extends AbstractAuthorityServiceTest
 //    final String ITEM_SERVICE_PATH_COMPONENT = "items";
 //    
 
-    final String TEST_EXHIBITION_TERM_DISPLAY_NAME = "Space Wars! (2013)";
+    final String TEST_EXHIBITION_TERM_DISPLAY_NAME = "Yves Klien: With the Void, Full Powers";
     final String TEST_EXHIBITION_TERM_FORMATTED_DISPLAY_NAME = "";
-    final String TEST_EXHIBITION_TERM_NAME = "Space Wars!";
-    final String TEST_EXHIBITION_TERM_TYPE = "public name";
+    final String TEST_EXHIBITION_TERM_NAME = "Yves Klien: With the Void, Full Powers";
+    final String TEST_EXHIBITION_TERM_TYPE = "preferred";
     final String TEST_EXHIBITION_TERM_STATUS = "accepted";
     final String TEST_EXHIBITION_TERM_QUALIFIER = "term qualifier";
     final String TEST_EXHIBITION_TERM_LANGUAGE = "english";
@@ -94,15 +94,19 @@ public class ExhibitionAuthorityServiceTest extends AbstractAuthorityServiceTest
     final String TEST_EXHIBITION_TERM_SOURCE_ID = "12345";    
     final String TEST_EXHIBITION_TERM_SOURCE_NOTE = "source note goes here";
 
-    final String TEST_EXHIBITION_START_DATE = "2013-03-01";
-    final String TEST_EXHIBITION_END_DATE = "2014-03-31";
-    final String TEST_EXHIBITION_ORGANIZER = "Maria Organizer";
-    final String TEST_EXHIBITION_SPONSOR = "Sean Sponsor";
-    final String TEST_EXHIBITION_LOCATION_INTERNAL = "Shelf 1";
-    final String TEST_EXHIBITION_LOCATION_EXTERNAL = "Gallery 1";
+    final String TEST_EXHIBITION_ORGANIZER = "Hirshhorn Museum and Sculpture Garden";
+    final String TEST_EXHIBITION_VENUE_NAME = "Hirshhorn Museum and Sculpture Garden";
+    final String TEST_EXHIBITION_VENUE_START_DATE = "2010-02-10";
+    final String TEST_EXHIBITION_VENUE_END_DATE = "2010-05-31";
+    final String TEST_EXHIBITION_VENUE_ATTENDANCE = "123456";
+    final String TEST_EXHIBITION_LOCATION_INTERNAL = "Gallery 4";
+    final String TEST_EXHIBITION_CURATOR = "Kerry Brougher";
+    final String TEST_EXHIBITION_PUBLICATION = "yes";
+    final String TEST_EXHIBITION_CATALOGUE = "catalogue goes here";
+    final String TEST_EXHIBITION_LINK = "link goes here";
     final String TEST_EXHIBITION_REMARKS = "remark goes here";
 
-    final String TEST_EXHIBITION_SHORT_IDENTIFIER = "spacewars";
+    final String TEST_EXHIBITION_SHORT_IDENTIFIER = "YvesKlienWiththeVoidFullPowers";
     final String TEST_EXHIBITION_REFNAME = "refname";
     
     /** The known resource id. */

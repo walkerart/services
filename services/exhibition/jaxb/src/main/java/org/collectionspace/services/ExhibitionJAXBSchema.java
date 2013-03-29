@@ -11,16 +11,22 @@ public interface ExhibitionJAXBSchema extends AuthorityItemJAXBSchema {
     final static String SHORT_DISPLAY_NAME = "shortDisplayName";
     final static String SHORT_DISPLAY_NAME_COMPUTED = "shortDisplayNameComputed";
 
-    final static String EXHIBITION_START_DATE = "exhibitionStartDate";
-    final static String EXHIBITION_END_DATE = "exhibitionEndDate";
     final static String EXHIBITION_ORGANIZERS = "exhibitionOrganizers";
     final static String EXHIBITION_ORGANIZER = "exhibitionOrganizer";
-    final static String EXHIBITION_SPONSORS = "exhibitionSponsors";
-    final static String EXHIBITION_SPONSOR = "exhibitionSponsor";
+    final static String EXHIBITION_VENUE_GROUP_LIST = "exhibitionVenueGroupList";
+    final static String EXHIBITION_VENUE_NAME = "venueName";
+    final static String EXHIBITION_VENUE_START_DATE = "venueStartDate";
+    final static String EXHIBITION_VENUE_END_DATE = "venueEndDate";
+    final static String EXHIBITION_VENUE_ATTENDANCE = "venueAttendance";
     final static String EXHIBITION_LOCATIONS_INTERNAL = "exhibitionLocationsInternal";
     final static String EXHIBITION_LOCATION_INTERNAL = "exhibitionLocationInternal";
-    final static String EXHIBITION_LOCATIONS_EXTERNAL = "exhibitionLocationsExternal";
-    final static String EXHIBITION_LOCATION_EXTERNAL = "exhibitionLocationExternal";
+    final static String EXHIBITION_CURATORS = "exhibitionCurators";
+    final static String EXHIBITION_CURATOR = "exhibitionCurator";
+    final static String EXHIBITION_PUBLICATION = "exhibitionPublication";
+    final static String EXHIBITION_CATALOGUES = "exhibitionCatalogues";
+    final static String EXHIBITION_CATALOGUE = "exhibitionCatalogue";
+    final static String EXHIBITION_LINKS = "exhibitionLinks";
+    final static String EXHIBITION_LINK = "exhibitionLink";
     final static String EXHIBITION_REMARKS = "exhibitionRemarks";
 
     final static String EXHIBITION_TERM_GROUP_LIST = "exhibitionTermGroupList";
