@@ -66,6 +66,7 @@
         <module>place</module>
         <module>work</module>
         <module>concept</module>
+        <module>exhibition</module>
         <module>taxonomy</module>
         <module>movement</module>
         <module>report</module>

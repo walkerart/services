@@ -41,6 +41,7 @@ import org.collectionspace.services.location.LocationAuthorityResource;
 import org.collectionspace.services.place.PlaceAuthorityResource;
 import org.collectionspace.services.work.WorkAuthorityResource;
 import org.collectionspace.services.concept.ConceptAuthorityResource;
+import org.collectionspace.services.exhibition.ExhibitionAuthorityResource;
 import org.collectionspace.services.taxonomy.TaxonomyAuthorityResource;
 import org.collectionspace.services.movement.MovementResource;
 import org.collectionspace.services.report.ReportResource;
@@ -104,6 +105,7 @@ public class CollectionSpaceJaxRsApplication extends Application
         addResourceToMapAndSingletons(new PersonAuthorityResource());
         addResourceToMapAndSingletons(new OrgAuthorityResource());
         addResourceToMapAndSingletons(new LocationAuthorityResource());
+        addResourceToMapAndSingletons(new ExhibitionAuthorityResource());
         addResourceToMapAndSingletons(new ConceptAuthorityResource());
         addResourceToMapAndSingletons(new TaxonomyAuthorityResource());
         addResourceToMapAndSingletons(new PlaceAuthorityResource());
