@@ -654,6 +654,42 @@ from the museum''s collections.',
         FROM    id_generators
         );
 
+-- PRESENTATION_REF_NUMBER
+
+INSERT INTO id_generators
+    (csid, displayname, description, priority, last_generated_id, id_generator_state)
+  SELECT
+     'dc48e16e-3539-4c70-829d-3703b21d7715',
+     'Presentation Reference Number',
+     'Identifies a Use of Collections: Presentation record.',
+     '9',
+     '',
+'<org.collectionspace.services.id.SettableIDGenerator>
+  <parts>
+    <org.collectionspace.services.id.StringIDGeneratorPart>
+      <initialValue>PR</initialValue>
+      <currentValue>PR</currentValue>
+    </org.collectionspace.services.id.StringIDGeneratorPart>
+    <org.collectionspace.services.id.YearIDGeneratorPart>
+      <currentValue></currentValue>
+    </org.collectionspace.services.id.YearIDGeneratorPart>
+    <org.collectionspace.services.id.StringIDGeneratorPart>
+      <initialValue>.</initialValue>
+      <currentValue>.</currentValue>
+    </org.collectionspace.services.id.StringIDGeneratorPart>
+    <org.collectionspace.services.id.NumericIDGeneratorPart>
+      <maxLength>6</maxLength>
+      <initialValue>1</initialValue>
+      <currentValue>-1</currentValue>
+    </org.collectionspace.services.id.NumericIDGeneratorPart>
+  </parts>
+</org.collectionspace.services.id.SettableIDGenerator>'
+  WHERE 'dc48e16e-3539-4c70-829d-3703b21d7715' NOT IN
+        (
+        SELECT  csid
+        FROM    id_generators
+        );
+
 -- STUDY_NUMBER
 
 INSERT INTO id_generators

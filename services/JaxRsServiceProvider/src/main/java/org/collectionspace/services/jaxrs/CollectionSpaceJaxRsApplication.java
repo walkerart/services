@@ -34,6 +34,7 @@ import org.collectionspace.services.intake.IntakeResource;
 import org.collectionspace.services.loanin.LoaninResource;
 import org.collectionspace.services.loanout.LoanoutResource;
 import org.collectionspace.services.conditioncheck.ConditioncheckResource;
+import org.collectionspace.services.presentation.PresentationResource;
 import org.collectionspace.services.objectexit.ObjectExitResource;
 import org.collectionspace.services.batch.BatchResource;
 import org.collectionspace.services.imports.ImportsResource;
@@ -121,6 +122,7 @@ public class CollectionSpaceJaxRsApplication extends Application
         addResourceToMapAndSingletons(new LoaninResource());
         addResourceToMapAndSingletons(new LoanoutResource());
         addResourceToMapAndSingletons(new ConditioncheckResource());
+        addResourceToMapAndSingletons(new PresentationResource());
         addResourceToMapAndSingletons(new ObjectExitResource());
         addResourceToMapAndSingletons(new BatchResource());
         addResourceToMapAndSingletons(new MediaResource());
