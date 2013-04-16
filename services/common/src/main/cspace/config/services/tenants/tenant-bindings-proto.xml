@@ -998,7 +998,7 @@
         </tenant:serviceBindings>
         <!-- end loanout service meta-data -->
 
-<!-- begin conditioncheck service meta-data -->
+        <!-- begin conditioncheck service meta-data -->
         <tenant:serviceBindings id="Conditionchecks" name="Conditionchecks" type="procedure" version="0.1">
             <service:repositoryDomain xmlns:service="http://collectionspace.org/services/config/service">default-domain</service:repositoryDomain>
             <service:documentHandler xmlns:service="http://collectionspace.org/services/config/service">org.collectionspace.services.conditioncheck.nuxeo.ConditioncheckDocumentModelHandler</service:documentHandler>

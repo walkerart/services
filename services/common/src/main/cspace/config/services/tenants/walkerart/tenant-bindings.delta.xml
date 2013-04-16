@@ -84,6 +84,51 @@
             </service:object>
         </tenant:serviceBindings>
 
+        <tenant:serviceBindings merge:matcher="id" id="Presentations">
+            <service:DocHandlerParams xmlns:service="http://collectionspace.org/services/config/service">
+                <!--service:params>
+                    <service:ListResultsFields>
+                        <service:ListResultField merge:matcher="skip" merge:action="insert">
+                            <service:element>computedSummary</service:element>
+                            <service:schema>presentations_walkerart</service:schema>
+                            <service:xpath>computedSummary</service:xpath>
+                        </service:ListResultField>
+                    </service:ListResultsFields>
+                </service:params-->
+            </service:DocHandlerParams>
+            <service:properties xmlns:service="http://collectionspace.org/services/config/service" merge:matcher="tag" merge:action="delete">
+                <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                    <types:key>objectNameProperty</types:key>
+                    <types:value>exhibitionTitle</types:value>
+                </types:item>
+                <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
+                    <types:key>objectNameProperty</types:key>
+                    <types:value>updatedExhibitionVenueGroupList/[0]/updatedVenueName</types:value>
+                </types:item-->
+                <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                    <types:key>objectNumberProperty</types:key>
+                    <types:value>presentationRefNumber</types:value>
+                </types:item>
+            </service:properties>
+            <service:properties xmlns:service="http://collectionspace.org/services/config/service" merge:matcher="skip" merge:action="insert">
+                <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                    <types:key>objectNameProperty</types:key>
+                    <types:value>updatedExhibitionVenueGroupList/[0]/updatedVenueName</types:value>
+                </types:item>
+                <types:item xmlns:types="http://collectionspace.org/services/config/types">
+                    <types:key>objectNumberProperty</types:key>
+                    <types:value>exhibitionTitle</types:value>
+                </types:item>
+            </service:properties>
+            <service:object xmlns:service="http://collectionspace.org/services/config/service" >
+                <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="presentations_walkerart" updated="" order="3">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/presentation/local/walkerart" schemaLocation="http://collectionspace.org/services/presentation/local/walkerart http://collectionspace.org/services/presentation/local/presentations_walkerart.xsd" />
+                    </service:content>
+                </service:part>
+            </service:object>
+        </tenant:serviceBindings>
+
         <tenant:serviceBindings merge:matcher="id" id="Media">
             <service:object xmlns:service="http://collectionspace.org/services/config/service" >
                 <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="media_walkerart" updated="" order="3">

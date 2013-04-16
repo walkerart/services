@@ -18,7 +18,16 @@
         3rd party build for presentation service
     </description>
 
+    <properties>
+        <ServiceName>presentation</ServiceName>
+        <NuxeoDocTypeName>Presentation</NuxeoDocTypeName>   
+        <CommonSchemaName>presentations_common</CommonSchemaName>
+        <TenantPrefix>Tenant</TenantPrefix>
+        <Lifecycle>cs_locking</Lifecycle>
+    </properties>
+
     <modules>
         <module>nuxeo-platform-cs-presentation</module>
+        <module>nuxeo-platform-presentation-walkerart</module>
     </modules>
 </project>

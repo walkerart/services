@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Presentation schema (XSD)
+    
+    Entity  : Presentation
+    Part    : Local - Walker Art Center
+    Used for: Nuxeo EP core document type
+-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="http://collectionspace.org/services/presentation/local/walkerart"
+    xmlns="http://collectionspace.org/services/presentation/local/walkerart"
+    targetNamespace="http://collectionspace.org/services/presentation/local/walkerart"
+    version="0.1">
+
+    <!--  Use of Collections: Presentation Information Group -->
+    <xs:element name="computedSummary" type="xs:string"/>
+    
+</xs:schema>
