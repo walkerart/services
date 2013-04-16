@@ -101,10 +101,6 @@
                     <types:key>objectNameProperty</types:key>
                     <types:value>exhibitionTitle</types:value>
                 </types:item>
-                <!--types:item xmlns:types="http://collectionspace.org/services/config/types">
-                    <types:key>objectNameProperty</types:key>
-                    <types:value>updatedExhibitionVenueGroupList/[0]/updatedVenueName</types:value>
-                </types:item-->
                 <types:item xmlns:types="http://collectionspace.org/services/config/types">
                     <types:key>objectNumberProperty</types:key>
                     <types:value>presentationRefNumber</types:value>
