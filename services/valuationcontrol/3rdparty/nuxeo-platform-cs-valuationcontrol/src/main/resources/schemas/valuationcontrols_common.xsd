@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Valuation Control schema (XSD)
+    
+    Entity  : Valuation Control
+    Part    : Common
+    Used for: Nuxeo EP core document type
+-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns="http://collectionspace.org/valuationcontrol/"
+    xmlns="http://collectionspace.org/valuationcontrol/"
+    targetNamespace="http://collectionspace.org/valuationcontrol/"
+    version="0.1">
+
+    <!--  Valuation Control Information Group -->
+    <xs:element name="valuationcontrolRefNumber" type="xs:string"/>
+    <xs:element name="valueCurrency" type="xs:string"/>
+    <xs:element name="valueAmount" type="xs:decimal"/>
+    <xs:element name="valueDate" type="xs:date"/>
+    <xs:element name="valueSource" type="xs:string"/>
+    <xs:element name="valueType" type="xs:string"/>
+    <xs:element name="valueNote" type="xs:string"/>
+
+</xs:schema>
