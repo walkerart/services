@@ -27,6 +27,6 @@
     <xs:element name="lastModifiedByWAC" type="xs:string"/>
     <xs:element name="viewDepictedWAC" type="xs:string"/>
     <xs:element name="viewDescriptionWAC" type="xs:string"/>
-    <xs:element name="publicallyAccessibleWAC" type="xs:boolean"/>
+    <xs:element name="publiclyAccessibleWAC" type="xs:boolean"/>
 
 </xs:schema>
