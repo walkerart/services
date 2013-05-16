@@ -101,7 +101,6 @@
     <xs:complexType name="exhibitionTermGroup">
         <xs:sequence>
             <!-- Common across all authority item terms -->
-            <!-- Exhibition uses only a few of the common term group fields in the UI -->
             <xs:element name="termDisplayName" type="xs:string"/>
             <xs:element name="termFormattedDisplayName" type="xs:string"/>
             <xs:element name="termName" type="xs:string"/>
