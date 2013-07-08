@@ -20,7 +20,7 @@
 
   <xs:element name="employer" type="xs:string" />
   <xs:element name="assistant" type="xs:string"/>
-
+  <xs:element name="website" type="xs:string"/>
     
 
 </xs:schema>

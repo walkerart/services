@@ -29,6 +29,7 @@
         <module>nuxeo-platform-collectionobject-lifesci</module>
         <module>nuxeo-platform-collectionobject-walkerart</module>
         <module>nuxeo-platform-collectionobject-finearts</module>
+        <module>nuxeo-platform-collectionobject-performingarts</module>
     </modules>
 
 </project>

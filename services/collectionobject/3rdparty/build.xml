@@ -116,6 +116,8 @@
     description="deploy collectionobject in ${jee.server.nuxeo}">
         <ant antfile="nuxeo-platform-cs-collectionobject/build.xml" target="deploy" inheritall="false"/>
         <ant antfile="nuxeo-platform-collectionobject-walkerart/build.xml" target="deploy" inheritall="false"/>
+        <ant antfile="nuxeo-platform-collectionobject-finearts/build.xml" target="deploy" inheritall="false"/>
+        <ant antfile="nuxeo-platform-collectionobject-performingarts/build.xml" target="deploy" inheritall="false"/>
         <ant antfile="nuxeo-platform-collectionobject-lifesci/build.xml" target="deploy" inheritall="false"/>
     </target>
 
@@ -123,6 +125,8 @@
     description="undeploy collectionobject from ${jee.server.nuxeo}">
         <ant antfile="nuxeo-platform-cs-collectionobject/build.xml" target="undeploy" inheritall="false"/>
         <ant antfile="nuxeo-platform-collectionobject-walkerart/build.xml" target="undeploy" inheritall="false"/>
+        <ant antfile="nuxeo-platform-collectionobject-finearts/build.xml" target="undeploy" inheritall="false"/>        
+        <ant antfile="nuxeo-platform-collectionobject-performingarts/build.xml" target="undeploy" inheritall="false"/>
         <ant antfile="nuxeo-platform-collectionobject-lifesci/build.xml" target="undeploy" inheritall="false"/>
     </target>
 
@@ -130,6 +134,8 @@
     description="generate distribution for collectionobject" depends="package">
         <ant antfile="nuxeo-platform-cs-collectionobject/build.xml" target="dist" inheritall="false"/>
         <ant antfile="nuxeo-platform-collectionobject-walkerart/build.xml" target="dist" inheritall="false"/>
+        <ant antfile="nuxeo-platform-collectionobject-finearts/build.xml" target="dist" inheritall="false"/>
+        <ant antfile="nuxeo-platform-collectionobject-performingarts/build.xml" target="dist" inheritall="false"/>
         <ant antfile="nuxeo-platform-collectionobject-lifesci/build.xml" target="dist" inheritall="false"/>
     </target>
 
@@ -137,6 +143,8 @@
     description="generate distribution for collectionobject" depends="package">
         <ant antfile="nuxeo-platform-cs-collectionobject/build.xml" target="dist_installer" inheritall="false"/>
         <ant antfile="nuxeo-platform-collectionobject-walkerart/build.xml" target="dist_installer" inheritall="false"/>
+        <ant antfile="nuxeo-platform-collectionobject-finearts/build.xml" target="dist_installer" inheritall="false"/>
+        <ant antfile="nuxeo-platform-collectionobject-performingarts/build.xml" target="dist_installer" inheritall="false"/>
         <ant antfile="nuxeo-platform-collectionobject-lifesci/build.xml" target="dist_installer" inheritall="false"/>
     </target>
 

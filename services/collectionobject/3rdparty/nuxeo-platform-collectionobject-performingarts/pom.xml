@@ -9,18 +9,17 @@
     
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.collectionspace.services</groupId>
-    <artifactId>org.collectionspace.services.collectionobject.3rdparty.finearts.nuxeo</artifactId>
+    <artifactId>org.collectionspace.services.collectionobject.3rdparty.performingarts.nuxeo</artifactId>
     <packaging>jar</packaging>
-    <name>services.collectionobject.3rdparty.finearts.nuxeo</name>
+    <name>services.collectionobject.3rdparty.performingarts.nuxeo</name>
     <description>
-        CollectionObject Nuxeo document type for the Fine Arts Domain
+        CollectionObject Nuxeo document type for the Performing Arts Domain
     </description>
 
     <properties>
-    	<CustomSchemaName>collectionobjects_finearts</CustomSchemaName>
-    	<TenantLabel>finearts</TenantLabel>
+    	<CustomSchemaName>collectionobjects_performingarts</CustomSchemaName>
+    	<TenantLabel>performingarts</TenantLabel>
     </properties>
-
 
     
     <build>

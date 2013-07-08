@@ -2,48 +2,79 @@
 <tenant:TenantBindingConfig
 	xmlns:merge='http://xmlmerge.el4j.elca.ch'
 	xmlns:tenant='http://collectionspace.org/services/common/tenant'>
-	    	 
+
+
     <tenant:tenantBinding id="5" name="walkerart.org" displayName="Walker Art Center" version="0.1">
         <tenant:repositoryDomain name="default-domain" storageName="walkerart-domain" repositoryClient="nuxeo-java" />
 
 
+	    <tenant:serviceBindings merge:matcher="id" id="CollectionObjects">
+            <service:object xmlns:service="http://collectionspace.org/services/common/service" >
+                
+                <service:part id="11" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="collectionobjects_finearts" updated="" order="3">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/collectionobject/domain/finearts"
+                                            schemaLocation="http://collectionspace.org/services/collectionobject/domain/finearts http://collectionspace.org/services/collection_object/domain/collectionobject_finearts.xsd" />
+                    </service:content>
+                </service:part>
+                
+                <service:part id="12" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="collectionobjects_performingarts" updated="" order="3">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/collectionobject/domain/performingarts"
+                                            schemaLocation="http://collectionspace.org/services/collectionobject/domain/performingarts http://collectionspace.org/services/collection_object/domain/collectionobject_performingarts.xsd" />
+                    </service:content>
+                </service:part>
+                
+                <service:part id="13" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="collectionobjects_walkerart" updated="" order="3">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/collectionobject/domain/walkerart"
+                                            schemaLocation="http://collectionspace.org/services/collectionobject/domain/walkerart http://collectionspace.org/services/collection_object/domain/collectionobject_walkerart.xsd" />
+                    </service:content>
+                </service:part>
+                
+
+            </service:object>
+        </tenant:serviceBindings>
+
+
+
         <tenant:serviceBindings merge:matcher="id" id="Media">
             <service:object xmlns:service="http://collectionspace.org/services/common/service" >
-                 
+                
                 <service:part id="1" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="medias_walkerart" updated="" order="1">
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/medias/local/walkerart"
-                            schemaLocation="http://collectionspace.org/services/medias/local/walkerart/ http://collectionspace.org/services/persons/local/medias_walkerart.xsd" />
+                                            schemaLocation="http://collectionspace.org/services/medias/local/walkerart/ http://collectionspace.org/services/persons/local/medias_walkerart.xsd" />
                     </service:content>
                 </service:part>
-                 
+                
             </service:object>
         </tenant:serviceBindings>
 
         <tenant:serviceBindings merge:matcher="id" id="Organizations">
             <service:object xmlns:service="http://collectionspace.org/services/common/service" >
-                 
+                
                 <service:part id="1" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="organizations_walkerart" updated="" order="1">
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/organization/local/walkerart"
-                            schemaLocation="http://collectionspace.org/services/organization/local/walkerart/ http://collectionspace.org/services/organization/local/organizations_walkerart.xsd" />
+                                            schemaLocation="http://collectionspace.org/services/organization/local/walkerart/ http://collectionspace.org/services/organization/local/organizations_walkerart.xsd" />
                     </service:content>
                 </service:part>
-                 
+                
             </service:object>
         </tenant:serviceBindings>
         
 
         <tenant:serviceBindings merge:matcher="id" id="Persons">
             <service:object xmlns:service="http://collectionspace.org/services/common/service" >
-                 
+                
                 <service:part id="1" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="persons_walkerart" updated="" order="1">
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/persons/local/walkerart"
-                            schemaLocation="http://collectionspace.org/services/persons/local/walkerart/ http://collectionspace.org/services/persons/local/persons_walkerart.xsd" />
+                                            schemaLocation="http://collectionspace.org/services/persons/local/walkerart/ http://collectionspace.org/services/persons/local/persons_walkerart.xsd" />
                     </service:content>
                 </service:part>
-                 
+                
             </service:object>
         </tenant:serviceBindings>
         
@@ -52,18 +83,16 @@
 
         <tenant:serviceBindings merge:matcher="id" id="Locations">
             <service:object xmlns:service="http://collectionspace.org/services/common/service" >
-                 
+                
                 <service:part id="1" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="locations_walkerart" updated="" order="1">
                     <service:content contentType="application/xml">
                         <service:xmlContent namespaceURI="http://collectionspace.org/services/locations/local/walkerart"
-                            schemaLocation="http://collectionspace.org/services/locations/local/walkerart/ http://collectionspace.org/services/persons/local/locations_walkerart.xsd" />
+                                            schemaLocation="http://collectionspace.org/services/locations/local/walkerart/ http://collectionspace.org/services/persons/local/locations_walkerart.xsd" />
                     </service:content>
                 </service:part>
-                 
+                
             </service:object>
         </tenant:serviceBindings>
         
-
     </tenant:tenantBinding>
-	    	       
 </tenant:TenantBindingConfig>
