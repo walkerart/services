@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tenant:TenantBindingConfig
-	xmlns:merge='http://xmlmerge.el4j.elca.ch'
-	xmlns:tenant='http://collectionspace.org/services/config/tenant'>
+    xmlns:merge='http://xmlmerge.el4j.elca.ch'
+    xmlns:tenant='http://collectionspace.org/services/config/tenant'>
     
     <!-- Add your changes, if any, within the following tag pair. -->
     <!-- The value of the 'id' attribute, below, should match the corresponding -->
     <!-- value in cspace/config/services/tenants/core-tenant-bindings-proto.xml -->
     <tenant:tenantBinding id="5">
+
+        <!-- CSPACE-6185: Contacts extension service bindings are not being generated from app layer config, so put them here for now. -->
+        <tenant:serviceBindings merge:matcher="id" id="Contacts">
+            <service:object xmlns:service="http://collectionspace.org/services/config/service" >
+                <service:part id="3" merge:matcher="skip" merge:action="insert" control_group="Managed" versionable="true" auditable="false" label="contacts_walkerart" updated="" order="3">
+                    <service:content contentType="application/xml">
+                        <service:xmlContent namespaceURI="http://collectionspace.org/services/contact/local/walkerart" 
+                            schemaLocation="http://collectionspace.org/services/contact/local/walkerart http://collectionspace.org/services/contact/local/contacts_walkerart.xsd" />
+                    </service:content>
+                </service:part>
+            </service:object>
+        </tenant:serviceBindings>
     </tenant:tenantBinding>
-	    	       
+                   
 </tenant:TenantBindingConfig>
