@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    Presentation schema (XSD)
+    
+    Entity  : Presentation
+    Part    : Common
+    Used for: JAXB binding between XML and Java objects
+-->
+
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  jaxb:version="1.0" elementFormDefault="unqualified"
+  xmlns:ns="http://collectionspace.org/services/presentation"
+  xmlns="http://collectionspace.org/services/presentation"
+  targetNamespace="http://collectionspace.org/services/presentation"
+  version="0.1"
+>
+
+<!--
+    Avoid XmlRootElement nightmare:
+    See http://weblogs.java.net/blog/kohsuke/archive/2006/03/why_does_jaxb_p.html
+-->   
+    
+    <!--  Presentation Information Group -->
+    <xs:element name="presentations_common">
+        <xs:complexType>
+            <xs:sequence>
+                <!--  Use of Collections: Presentation Information Group -->
+                <xs:element name="presentationRefNumber" type="xs:string"/>
+                <xs:element name="presentationPresenter" type="xs:string"/>
+                <xs:element name="presentationType" type="xs:string"/>
+                <xs:element name="exhibitionTitle" type="xs:string"/>
+                <xs:element name="overrideExhibitionVenues" type="xs:boolean"/>
+                <xs:element name="updatedExhibitionVenueGroupList" type="updatedExhibitionVenueGroupList"/>
+                <xs:element name="presentationLocationInternal" type="xs:string"/>
+                <xs:element name="circulatedVenues" type="xs:string"/>
+                <xs:element name="presentationNote" type="xs:string"/>
+             </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+<!-- =================================================================
+     Updated Exhibition Venue Group repeating structure.
+     Modeled after Exhibition Venue Group from Exhibition authority.
+     ================================================================= -->
+
+    <xs:complexType name="updatedExhibitionVenueGroupList">
+        <xs:sequence>
+            <xs:element name="updatedExhibitionVenueGroup" type="updatedExhibitionVenueGroup" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updatedExhibitionVenueGroup">
+        <xs:sequence>
+            <xs:element name="updatedVenueName" type="xs:string"/>
+            <xs:element name="updatedVenueStartDate" type="xs:date"/>
+            <xs:element name="updatedVenueEndDate" type="xs:date"/>
+            <xs:element name="updatedVenueAttendance" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
