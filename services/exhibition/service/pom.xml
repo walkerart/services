@@ -2,32 +2,52 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <groupId>org.collectionspace.services</groupId>
-        <artifactId>org.collectionspace.services.relation</artifactId>
+        <artifactId>org.collectionspace.services.exhibition</artifactId>
         <version>4.0-SNAPSHOT</version>
     </parent>
     
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>org.collectionspace.services.relation.service</artifactId>
-    <name>services.relation.service</name>
+    <groupId>org.collectionspace.services</groupId>
+    <artifactId>org.collectionspace.services.exhibition.service</artifactId>
+    <name>services.exhibition.service</name>
     <packaging>jar</packaging>
-
+    
     <dependencies>
         <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.config</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+<!-- CollectionSpace dependencies -->        
         <dependency>
             <groupId>org.collectionspace.services</groupId>
             <artifactId>org.collectionspace.services.common</artifactId>
             <version>${project.version}</version>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.relation.jaxb</artifactId>
-            <version>1.0</version>
-        </dependency> -->
-        
+            <artifactId>org.collectionspace.services.authority.service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.collectionspace.services</groupId>
+            <artifactId>org.collectionspace.services.exhibition.jaxb</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.collectionspace.services</groupId>
+            <artifactId>org.collectionspace.services.exhibition.client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.collectionspace.services</groupId>
+            <artifactId>org.collectionspace.services.contact.service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- External dependencies -->        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -39,54 +59,18 @@
             <artifactId>testng</artifactId>
         </dependency>
         
+        <!-- apache -->
         <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.person.client</artifactId>
-            <version>${project.version}</version>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.6.1</version>
         </dependency>
-        
+        <!-- use explict 1.1 version to prevent errors coming from Nuxeo client -->
         <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.citation.client</artifactId>
-            <version>${project.version}</version>
-        </dependency>        
-        
-        <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.organization.client</artifactId>
-            <version>${project.version}</version>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.location.client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.place.client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.work.client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.exhibition.client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.taxonomy.client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.collectionspace.services</groupId>
-            <artifactId>org.collectionspace.services.concept.client</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
       <!-- javax -->
 
 
@@ -141,6 +125,9 @@
     </dependencies>
     
     <build>
-        <finalName>collectionspace-services-relation</finalName>
+        <finalName>collectionspace-services-exhibition</finalName>
+        <plugins>
+        </plugins>
     </build>
 </project>
+
