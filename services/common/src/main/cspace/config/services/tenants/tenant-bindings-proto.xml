@@ -1132,10 +1132,6 @@
                             <service:element>exhibitionTitle</service:element>
                             <service:xpath>exhibitionTitle</service:xpath>
                         </service:ListResultField>
-                        <service:ListResultField>
-                            <service:element>updatedVenueName</service:element>
-                            <service:xpath>updatedExhibitionVenueGroupList/[0]/updatedVenueName</service:xpath>
-                        </service:ListResultField>
                     </service:ListResultsFields>
                 </service:params>
             </service:DocHandlerParams>
@@ -1144,10 +1140,6 @@
                 <types:item xmlns:types="http://collectionspace.org/services/config/types">
                     <types:key>objectNameProperty</types:key>
                     <types:value>exhibitionTitle</types:value>
-                </types:item>
-                <types:item xmlns:types="http://collectionspace.org/services/config/types">
-                    <types:key>objectNameProperty</types:key>
-                    <types:value>updatedExhibitionVenueGroupList/[0]/updatedVenueName</types:value>
                 </types:item>
                 <types:item xmlns:types="http://collectionspace.org/services/config/types">
                     <types:key>objectNumberProperty</types:key>
@@ -1170,10 +1162,6 @@
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
                             <types:value>exhibitionTitle</types:value>
-                        </types:item>
-                        <types:item xmlns:types="http://collectionspace.org/services/config/types">
-                            <types:key>authRef</types:key>
-                            <types:value>updatedExhibitionVenueGroupList/*/updatedVenueName</types:value>
                         </types:item>
                         <types:item xmlns:types="http://collectionspace.org/services/config/types">
                             <types:key>authRef</types:key>
